@@ -12,8 +12,10 @@ export default createVuetify({
       light: {
         dark: false,
         colors: {
-          primary: '#2680eb', // #E53935
-          secondary: '#fc6060' //#FFCDD2
+          primary: '#2680eb',
+          secondary: '#fc6060',
+          darkgrey: '#3c4d60',
+          grey: '#5e7892',
         }
       },
     },
@@ -21,8 +23,7 @@ export default createVuetify({
   defaults: {
     VBtn: {
       color: 'primary',
-      variant: 'outlined',
-      rounded: false
+      flat: true,
     },
   },
 })
