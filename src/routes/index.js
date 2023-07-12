@@ -18,6 +18,11 @@ export default createRouter ({
       name: 'guideList',
       component: () => import("@/views/guide")
     },
+    {
+      path: '/setting/env',
+      name: 'settingEnv',
+      component: () => import("@/views/setting/env")
+    },
   ]
 })
 

@@ -1,0 +1,33 @@
+.v-checkbox {
+  .v-label {
+    font-size: 12px !important;
+    color: #2c2f35 !important;
+  }
+}
+
+.v-radio {
+  .v-label {
+    font-size: 12px !important;
+    color: #2c2f35 !important;
+  }
+}
+
+.input-counter {
+  border: 1px solid #d6dbe2;
+  padding: 4px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .v-btn {
+    flex-shrink: 0;
+  }
+  input {
+    flex: 1;
+    text-align: center;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}

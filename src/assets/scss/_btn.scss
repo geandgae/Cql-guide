@@ -1,0 +1,26 @@
+// v-btn size
+.v-btn:not(.v-tab) {
+  // &.v-btn--size-small {
+  //   height: 26px !important;
+  // }
+  &.v-btn--size-large {
+    height: 40px !important;
+  }
+  &.v-btn--size-x-large {
+    height: 60px !important;
+  }
+}
+
+// custom-btn-icon
+.v-btn.custom-btn-icon {
+  display: flex !important;
+  justify-content: flex-start !important;
+  .v-btn__content {
+    flex: 1 !important;
+  }
+  .v-btn__append {
+    flex-shrink: 0 !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding-left: 8px !important;
+  }
+}

@@ -2,16 +2,17 @@
   <!-- v-container -->
   <v-container fluid class="pa-10">
     <h1 class="mb-10">IA List</h1>
-    <v-table class="flex-grow-1" density="compact">
+    <v-table class="flex-grow-1">
       <thead>
         <tr>
-          <th v-for="item, i in th" :key="i">{{ item.title }}</th>
+          <th v-for="item, i in th" :key="i" class="text-center">{{ item.title }}</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="item, i in td.length" :key="item">
           <td v-for="x, n in td[i]" :key="n">
-            <span v-if="x.link === true" style="cursor: pointer;" @click="link(x.to)">{{ x.to }}</span>
+            <v-btn v-if="x.link === true" size="small" style="min-width: 80px" @click="link(x.to)">{{ x.to }} 이동</v-btn>
+            <!-- <span v-if="x.link === true" style="cursor: pointer;" @click="link(x.to)">{{ x.to }}</span> -->
             <span v-else>{{ x }}</span>
           </td>
         </tr>
@@ -27,7 +28,7 @@ export default {
   data() {
     return {
       th: [
-        { title: '번호', key: 'idx', },
+        { title: '구분', key: 'type', },
         { title: 'depth1', key: 'depth1', },
         { title: 'depth2', key: 'depth2', },
         { title: 'depth3', key: 'depth3', },
@@ -37,12 +38,24 @@ export default {
       ],
       td: [
         {
-          idx: 1,
+          type: '가이드',
           depth1: 'guide',
           depth2: '-',
           depth3: '-',
           url: {
             to: '/guide',
+            link: true,
+          },
+          status: '대기',
+          memo: '-',
+        },
+        {
+          type: '팝업',
+          depth1: 'setting',
+          depth2: 'env',
+          depth3: '-',
+          url: {
+            to: '/setting/env',
             link: true,
           },
           status: '대기',

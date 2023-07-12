@@ -1,0 +1,81 @@
+// popup
+.popup {
+  display: flex;
+  flex-direction: column;
+  .v-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #3c4d60;
+    background-color: #f2f5f8;
+    .v-card-title {
+      flex-shrink: 0;
+      background-color: $g-dark-navy;
+      height: 60px;
+      .title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+      }
+      .chip-bi {
+        width: 34px;
+        height: 34px;
+        background-color: #3c4d60;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btns {
+        .v-btn {
+          min-width: 36px;
+        }
+      }
+    }
+    .v-card-text {
+      flex: 1;
+      // overflow-y: auto;
+      .sub-title {
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .tabs {
+        background-color: #3c4d60;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 18px;
+        gap: 4px;
+        .v-btn { 
+          width: 100px;
+          font-size: 12px !important;
+          color: #2c2f35 !important;
+          &.active {
+            background-color: $g-secondary !important;
+            color: #fff !important;
+          }
+        }
+      }
+      .tab-apanel {
+        padding: 14px 20px 0;
+      }
+    }
+    .popup-footer {
+      flex-shrink: 0;
+      .btns {
+        margin: 26px 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+  }
+  &.size-md {
+    width: 950px;
+    min-height: 800px;
+  }
+}
