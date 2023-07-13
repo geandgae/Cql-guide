@@ -24,6 +24,12 @@ export default createRouter ({
       component: () => import("@/views/setting/env")
     },
     {
+      path: '/app-main',
+      name: 'app-main',
+      component: () => import("@/views/app-main")
+    },
+    // test
+    {
       path: '/setting/popup',
       name: 'popup',
       component: () => import("@/views/setting/popup")

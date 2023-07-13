@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 // popup
 .popup {
   display: flex;
@@ -13,8 +15,6 @@
       background-color: $g-dark-navy;
       height: 60px;
       .title {
-        font-size: 18px;
-        font-weight: 700;
         color: #fff;
       }
       .chip-bi {

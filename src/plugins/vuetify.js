@@ -22,7 +22,7 @@ export default createVuetify({
   },
   defaults: {
     VBtn: {
-      color: 'primary',
+      // color: 'primary',
       flat: true,
     },
   },

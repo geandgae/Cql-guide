@@ -11,7 +11,7 @@
       <tbody>
         <tr v-for="item, i in td.length" :key="item">
           <td v-for="x, n in td[i]" :key="n">
-            <v-btn v-if="x.link === true" size="small" style="min-width: 80px" @click="link(x.to)">{{ x.to }} 이동</v-btn>
+            <v-btn v-if="x.to" size="small" style="min-width: 80px" @click="link(x.to)">이동</v-btn>
             <!-- <span v-if="x.link === true" style="cursor: pointer;" @click="link(x.to)">{{ x.to }}</span> -->
             <span v-else>{{ x }}</span>
           </td>
@@ -46,7 +46,6 @@ export default {
           depth3: '-',
           url: {
             to: '/guide',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -58,8 +57,7 @@ export default {
           depth2: '-',
           depth3: '-',
           url: {
-            to: '/main',
-            link: true,
+            to: '/app-main',
           },
           status: '완료',
           memo: '대시보드',
@@ -73,7 +71,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/registration_status',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -86,7 +83,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/ISGA',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -99,7 +95,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/hotel_news',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -112,7 +107,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/hotel_news_view',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -125,7 +119,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/notice',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -138,7 +131,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/notice_view',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -151,7 +143,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/subscribe_status',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -164,7 +155,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/subscribe_status_channel',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -177,7 +167,6 @@ export default {
           depth3: '-',
           url: {
             to: '/dashboard/subscribe_status_view',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -191,7 +180,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/index',
-            link: true,
           },
           status: '대기',
           memo: '객실관리메인',
@@ -204,7 +192,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/checkIn',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -217,7 +204,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/check_in',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -230,7 +216,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/check_room',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -243,7 +228,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/check_room',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -256,7 +240,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/check_sales',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -269,7 +252,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/check_history',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -282,7 +264,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/check_event',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -295,7 +276,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/room_setting',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -308,7 +288,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/simulator',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -321,7 +300,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/sales_status',
-            link: true,
           },
           status: '대기',
           memo: '',
@@ -335,7 +313,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/index',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -348,7 +325,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/point_list',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -361,7 +337,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/room_info',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -374,7 +349,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/room_type',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -387,7 +361,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/room_status',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -400,7 +373,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/point_management',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -413,7 +385,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/room_reservation',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -426,7 +397,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/room_registration',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -439,7 +409,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/board_alarm',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -452,7 +421,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/board_alarm_write',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -465,7 +433,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/board_as',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -478,7 +445,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/board_as_write',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -491,7 +457,6 @@ export default {
           depth3: '-',
           url: {
             to: '/room/board_as_write',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -505,7 +470,6 @@ export default {
           depth3: '-',
           url: {
             to: '/setting/env',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -519,7 +483,6 @@ export default {
           depth3: '-',
           url: {
             to: '/timeline/index',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -532,7 +495,6 @@ export default {
           depth3: '-',
           url: {
             to: '/timeline/timeline_page',
-            link: true,
           },
           status: '대기',
           memo: '-',
@@ -547,7 +509,6 @@ export default {
           depth3: '-',
           url: {
             to: '/setting/key_status',
-            link: true,
           },
           status: '대기',
           memo: '-',

@@ -1,3 +1,69 @@
-.color-primary {
-  color: $g-primary !important;
+@charset "utf-8";
+
+@font-face {
+  font-family: "sebang";
+  font-weight: 400;
+  src: url(@/assets/font/SEBANG-Gothic.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "sebangb";
+  font-weight: 400;
+  src: url(@/assets/font/SEBANG-Gothic-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "noto";
+  font-weight: 400;
+  src: url(@/assets/font/NotoSansKR-Regular.eot); 
+  src: url(@/assets/font/NotoSansKR-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "notom";
+  font-weight: 500;
+  src: url(@/assets/font/NotoSansKR-Medium.eot);
+  src: url(@/assets/font/NotoSansKR-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "notob";
+  font-weight: 700;
+  src: url(@/assets/font/NotoSansKR-Bold.eot);
+  src: url(@/assets/font/NotoSansKR-Bold.ttf) format("truetype");
+}
+
+
+
+// @font-face {
+//  font-family: 'S-CoreDream';
+//  font-weight: 400;
+//  src: url(@/assets/font/SCDream_regular.eot);
+//  src: url(@/assets/font/SCDream_regular.eot?#iefix) format('embedded-opentype'),
+//       url(@/assets/font/SCDream_regular.woff) format('woff'),
+//       url(@/assets/font/SCDream_regular.ttf) format('truetype');
+// }
+// @font-face {
+//  font-family: 'S-CoreDream-bold';
+//  font-weight: 400;
+//  src: url(@/assets/font/SCDream_bold.eot);
+//  src: url(@/assets/font/SCDream_bold.eot?#iefix) format('embedded-opentype'),
+//       url(@/assets/font/SCDream_bold.woff) format('woff'),
+//       url(@/assets/font/SCDream_bold.ttf) format('truetype');
+// }
+// @font-face {
+//  font-family: 'S-CoreDream-light';
+//  font-weight: 400;
+//  src: url(@/assets/font/SCDream_light.eot);
+//  src: url(@/assets/font/SCDream_light.eot?#iefix) format('embedded-opentype'),
+//       url(@/assets/font/SCDream_light.woff) format('woff'),
+//       url(@/assets/font/SCDream_light.ttf) format('truetype');
+// }
+// @font-face {
+//  font-family: 'S-CoreDream-medium';
+//  font-weight: 400;
+//  src: url(@/assets/font/SCDream_medium.eot);
+//  src: url(@/assets/font/SCDream_medium.eot?#iefix) format('embedded-opentype'),
+//       url(@/assets/font/SCDream_medium.woff) format('woff'),
+//       url(@/assets/font/SCDream_medium.ttf) format('truetype');
+// }

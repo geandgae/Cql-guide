@@ -1,6 +1,6 @@
 <template>
   <!-- popup -->
-  <div class="popup size-md">
+  <div class="theme-cqi popup size-md">
     <v-card>
       <!-- top -->
       <v-card-title class="d-flex align-center">
