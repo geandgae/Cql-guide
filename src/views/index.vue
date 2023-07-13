@@ -29,10 +29,10 @@ export default {
     return {
       th: [
         { title: '구분', key: 'type', },
-        { title: 'depth1', key: 'depth1', },
-        { title: 'depth2', key: 'depth2', },
-        { title: 'depth3', key: 'depth3', },
-        { title: 'url', key: 'url', },
+        { title: '뎁스1', key: 'depth1', },
+        { title: '뎁스2', key: 'depth2', },
+        { title: '뎁스3', key: 'depth3', },
+        { title: '링크', key: 'url', },
         { title: '상태', key: 'status', },
         { title: '메모', key: 'memo', },
       ],
