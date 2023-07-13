@@ -23,6 +23,11 @@ export default createRouter ({
       name: 'settingEnv',
       component: () => import("@/views/setting/env")
     },
+    {
+      path: '/setting/popup',
+      name: 'popup',
+      component: () => import("@/views/setting/popup")
+    },
   ]
 })
 
