@@ -61,6 +61,42 @@ export default {
           status: '대기',
           memo: '-',
         },
+        {
+          type: '팝업',
+          depth1: 'room',
+          depth2: 'index',
+          depth3: '-',
+          url: {
+            to: '/room/index',
+            link: true,
+          },
+          status: '대기',
+          memo: '-',
+        },
+        {
+          type: '팝업',
+          depth1: 'timeline',
+          depth2: 'index',
+          depth3: '-',
+          url: {
+            to: '/timeline/index',
+            link: true,
+          },
+          status: '대기',
+          memo: '-',
+        },
+        {
+          type: '팝업',
+          depth1: 'management',
+          depth2: 'index',
+          depth3: '-',
+          url: {
+            to: '/management/index',
+            link: true,
+          },
+          status: '대기',
+          memo: '-',
+        },
       ],
     };
   },
