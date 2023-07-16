@@ -19,20 +19,32 @@ export default createRouter ({
       component: () => import("@/views/guide")
     },
     {
-      path: '/setting/env',
-      name: 'settingEnv',
-      component: () => import("@/views/setting/env")
-    },
-    {
       path: '/app-main',
       name: 'app-main',
       component: () => import("@/views/app-main")
     },
+    // management
+    {
+      path: '/management/roominfo',
+      name: 'setting',
+      component: () => import("@/views/management/RoomInfo")
+    },
+    // setting
+    // {
+    //   path: '/setting',
+    //   name: 'setting',
+    //   component: () => import("@/views/setting/Index")
+    // },
     // test
     {
       path: '/setting/popup',
-      name: 'popup',
-      component: () => import("@/views/setting/popup")
+      name: 'popup-test',
+      component: () => import("@/views/setting-test/popup")
+    },
+    {
+      path: '/setting/env',
+      name: 'settingEnv',
+      component: () => import("@/views/setting-test/env")
     },
   ]
 })

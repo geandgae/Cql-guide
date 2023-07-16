@@ -75,7 +75,7 @@
           </template>
         </v-btn>
 
-        <v-btn append-icon="mdi-trash-can-outline" size="small" style="width: 160px" class="custom-btn-icon">
+        <v-btn color="primary" append-icon="mdi-trash-can-outline" size="small" style="width: 160px" class="custom-btn-icon">
           VIP 룸
           <template v-slot:append>
             <v-icon color="white"></v-icon>
@@ -110,9 +110,9 @@
 
         <v-btn color="grey" size="small" style="min-width: 80px">취소</v-btn>
 
-        <v-btn variant="outlined" color="secondary" prepend-icon="mdi-plus" size="small" style="min-width: 80px">
+        <v-btn color="white" class="custom-btn-icon-white" prepend-icon="mdi-plus-thick" size="small" style="min-width: 80px">
           <template v-slot:prepend>
-            <v-icon></v-icon>
+            <v-icon size="small" color="pa-0 ma-0"></v-icon>
           </template>
           구독추가
         </v-btn>
@@ -139,144 +139,92 @@
     <div v-if="tab === 'popup'" class="py-10">
       <h2>popup</h2>
 
-      <v-btn color="primary" class="my-10" @click="dialog = true">open popup</v-btn>
       <!-- popup -->
-      <v-dialog v-model="dialog" width="auto">
-        <div class="popup size-md">
-          <v-card>
-            <v-card-title class="d-flex align-center">
-              <span class="chip-bi">BI</span>
-              <h2 class="title mx-auto">환경설정</h2>
-              <div class="btns d-flex align-center">
-                <v-btn color="white" size="small" rounded="xl" class="pa-0" @click="dialog = false">
-                  <v-icon size="large" color="darkgrey">mdi-close-thick</v-icon>
-                </v-btn>
-              </div>
-            </v-card-title>
-            <v-card-text>popup-content</v-card-text>
-            <div class="popup-footer">
-              <div class="btns">
-                <v-btn color="darkgrey" size="large" style="min-width: 150px">닫기</v-btn>
-                <v-btn color="primary" size="large" style="min-width: 150px">저장</v-btn>
-              </div>
+      <Popup :popup="popup">
+        <!-- slot -->
+        <template v-slot:body>
+          <v-item-group v-model="setting" class="tabs">
+            <div v-for="item in tabsItem" :key="item" :value="item">
+              <v-btn
+                v-if="item === '구독관리'"
+                color="white"
+                style="width: 80px; height: 76px !important; position: absolute"
+                @click="toggle(item)"
+                :class="setting === item ? 'active' : ''"
+              >
+                {{ item }}
+              </v-btn>
+              <v-btn v-else color="white" @click="toggle(item)" :class="setting === item ? 'active' : ''">
+                {{ item }}
+              </v-btn>
             </div>
-          </v-card>
-        </div>
-      </v-dialog>
+          </v-item-group>
+          <!-- //tabs -->
+          <!-- popup-contents -->
+          <div class="popup-contents" v-if="setting === '요금설정'">
+            <h2>요금설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '운영규칙 설정'">
+            <h2>운영규칙 설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '입실시간 옵션'">
+            <h2>입실시간 옵션</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '무인판매 설정'">
+            <h2>무인판매 설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '예약설정'">
+            <h2>예약설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '포인트 설정'">
+            <h2>포인트 설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '잠금 설정'">
+            <h2>잠금 설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '냉/난방 설정'">
+            <h2>냉/난방 설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '구독관리'">
+            <h2>구독관리</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '화면설정'">
+            <h2>화면설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '음성설정'">
+            <h2>음성설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '전원설정'">
+            <h2>전원설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '알림설정'">
+            <h2>알림설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === 'PMS 설정'">
+            <h2>PMS 설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '도어락 설정'">
+            <h2>도어락 설정</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '데이터 관리'">
+            <h2>데이터 관리</h2>
+          </div>
+          <div class="popup-contents" v-if="setting === '직원관리'">
+            <h2>직원관리</h2>
+          </div>
+        </template>
+        <!-- //slot -->
+      </Popup>
       <!-- //popup -->
 
       <!-- popup -->
-      <div class="popup size-md">
-        <v-card>
-          <!-- top -->
-          <v-card-title class="d-flex align-center">
-            <span class="chip-bi">BI</span>
-            <h2 class="title mx-auto">환경설정</h2>
-            <div class="btns d-flex align-center">
-              <v-btn color="white" size="small" rounded="xl" class="pa-0 mr-2">
-                <v-icon size="large" color="darkgrey">mdi-pin</v-icon>
-              </v-btn>
-              <v-btn color="white" size="small" rounded="xl" class="pa-0">
-                <v-icon size="large" color="darkgrey">mdi-close-thick</v-icon>
-              </v-btn>
-            </div>
-          </v-card-title>
-          <!-- //top -->
-          <!-- body -->
-          <v-card-text class="pa-0">
-            <!-- tabs -->
-            <!-- <ul class="tabs">
-              <li v-for="item in tabsItem" :key="item" :value="item">
-                <v-btn v-if="item === '구독관리'" color="white" style="width: 80px; height: 76px !important; position: absolute" @click="test">
-                  {{ item }}
-                </v-btn>
-                <v-btn v-else color="white" @click="test">
-                  {{ item }}
-                </v-btn>
-              </li>
-            </ul> -->
-            <v-item-group v-model="setting" class="tabs">
-              <div v-for="item in tabsItem" :key="item" :value="item">
-                <v-btn
-                  v-if="item === '구독관리'"
-                  color="white"
-                  style="width: 80px; height: 76px !important; position: absolute"
-                  @click="toggle(item)"
-                  :class="setting === item ? 'active' : ''"
-                >
-                  {{ item }}
-                </v-btn>
-                <v-btn v-else color="white" @click="toggle(item)" :class="setting === item ? 'active' : ''">
-                  {{ item }}
-                </v-btn>
-              </div>
-            </v-item-group>
-            <!-- //tabs -->
-            <!-- tab-apanel -->
-            <div class="tab-apanel" v-if="setting === '요금설정'">
-              <h2>요금설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '운영규칙 설정'">
-              <h2>운영규칙 설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '입실시간 옵션'">
-              <h2>입실시간 옵션</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '무인판매 설정'">
-              <h2>무인판매 설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '예약설정'">
-              <h2>예약설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '포인트 설정'">
-              <h2>포인트 설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '잠금 설정'">
-              <h2>잠금 설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '냉/난방 설정'">
-              <h2>냉/난방 설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '구독관리'">
-              <h2>구독관리</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '화면설정'">
-              <h2>화면설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '음성설정'">
-              <h2>음성설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '전원설정'">
-              <h2>전원설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '알림설정'">
-              <h2>알림설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === 'PMS 설정'">
-              <h2>PMS 설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '도어락 설정'">
-              <h2>도어락 설정</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '데이터 관리'">
-              <h2>데이터 관리</h2>
-            </div>
-            <div class="tab-apanel" v-if="setting === '직원관리'">
-              <h2>직원관리</h2>
-            </div>
-            <!-- //tab-apanel -->
-          </v-card-text>
-          <!-- //body -->
-          <!-- footer -->
-          <div class="popup-footer">
-            <div class="btns">
-              <v-btn color="darkgrey" size="large" style="min-width: 150px">닫기</v-btn>
-              <v-btn color="primary" size="large" style="min-width: 150px">저장</v-btn>
-            </div>
-          </div>
-          <!-- //footer -->
-        </v-card>
-      </div>
+      <Popup :popup="popup2">
+        <!-- slot -->
+        <template v-slot:body>
+          popup2
+        </template>
+        <!-- //slot -->
+      </Popup>
       <!-- //popup -->
     </div>
 
@@ -607,8 +555,13 @@
 </template>
 
 <script>
+import Popup from "@/components/popup/popup.vue";
+
 export default {
   name: "guideList",
+  components: {
+    Popup,
+  },
   data() {
     return {
       // highcharts
@@ -656,7 +609,6 @@ export default {
       // tab
       tab: "form",
       setting: "요금설정",
-      dialog: false,
       tabsItem: [
         "요금설정",
         "운영규칙 설정",
@@ -676,6 +628,18 @@ export default {
         "데이터 관리",
         "직원관리",
       ],
+      popup: {
+        title: "환경설정",
+        theme: "theme-popup-dark",
+        size: "size-md",
+        align: "mx-auto",
+      },
+      popup2: {
+        title: "객실정보 관리2",
+        theme: "theme-popup-light",
+        size: "size-md",
+        align: "ml-3 mr-auto",
+      },
     };
   },
   methods: {

@@ -1,6 +1,6 @@
 <template>
   <!-- popup -->
-  <div class="theme-cqi popup size-md">
+  <div class="popup size-md">
     <v-card>
       <!-- top -->
       <v-card-title class="d-flex align-center">
@@ -16,14 +16,51 @@
       <!-- body -->
       <v-card-text class="pa-0">
         <!-- tabs -->
-        <v-item-group v-model="setting" class="tabs">
-          <div v-for="item in tabsItem" :key="item" :value="item">
+        <!-- tab Test -->
+        <!-- 탭 버튼 -->
+        <v-item-group v-model="onboarding" class="tabs" mandatory>
+          <!-- <v-item> -->
+          <v-item v-for="(item, index) in tabsItem" :key="index" v-slot="{ toggle }" :value="item" class="bong">
+            <!-- <div> -->
+              <v-btn
+                v-if="item === '구독관리'"
+                color="white"
+                style="width: 80px; height: 76px !important; position: absolute"
+                @click="toggle(index)"
+                :class="setting === item ? 'active' : ''"
+              >
+                {{ item }}
+              </v-btn>
+              <v-btn v-else color="white" @click="toggle(index)" :class="setting === item ? 'active' : ''">
+                {{ item }}
+              </v-btn>
+            <!-- </div> -->
+          </v-item>
+          <!-- </v-item> -->
+        </v-item-group>
+
+        <!-- /탭 버튼 -->
+
+        <!-- 탭 내용 -->
+        <v-window v-model="onboarding">
+          <v-window-item v-for="(item, index) in tabsItem" :key="index" :value="item">
+            <v-card height="200" class="d-flex justify-center align-center">
+              <span class="text-h2"> Card {{ index }} </span>
+            </v-card>
+          </v-window-item>
+        </v-window>
+        <!-- /탭 내용 -->
+        <!-- tab Test -->
+
+        <!-- <v-item-group v-model="onboarding" class="tabs">
+          <div v-for="(item, index) in tabsItem" :key="index" :value="item">
+          <div v-for="(item) in tabsItem" :key="item" :value="item">
             <v-btn
-              v-if="item === '구독관리'"
+              v-if="onboarding === '구독관리'"
               color="white"
               style="width: 80px; height: 76px !important; position: absolute"
               @click="toggle(item)"
-              :class="setting === item ? 'active' : ''"
+              :class="onboarding === 0 ? 'active' : ''"
             >
               {{ item }}
             </v-btn>
@@ -31,10 +68,11 @@
               {{ item }}
             </v-btn>
           </div>
-        </v-item-group>
+        </v-item-group> -->
         <!-- //tabs -->
-        <!-- tab-apanel -->
-        <div class="tab-apanel" v-if="setting === '요금설정'">
+
+        <!-- popup-contents -->
+        <div class="popup-contents" v-if="setting === '요금설정'">
           <h3 class="sub-title mb-2">요금 변경 시 금액 단위 설정</h3>
           <v-table>
             <colgroup>
@@ -47,11 +85,11 @@
               <tr>
                 <th class="text-center">대실</th>
                 <td>
-                  <div class="input-counter" style="width: 356px;">
+                  <div class="input-counter" style="width: 356px">
                     <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
                       <v-icon size="x-small" color="white">mdi-minus</v-icon>
                     </v-btn>
-                    <input type="text" value="10,000원">
+                    <input type="text" value="10,000원" />
                     <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
                       <v-icon size="x-small" color="white">mdi-plus</v-icon>
                     </v-btn>
@@ -59,11 +97,11 @@
                 </td>
                 <th class="text-center">숙박</th>
                 <td>
-                  <div class="input-counter" style="width: 356px;">
+                  <div class="input-counter" style="width: 356px">
                     <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
                       <v-icon size="x-small" color="white">mdi-minus</v-icon>
                     </v-btn>
-                    <input type="text" value="5,000원">
+                    <input type="text" value="5,000원" />
                     <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
                       <v-icon size="x-small" color="white">mdi-plus</v-icon>
                     </v-btn>
@@ -128,55 +166,55 @@
             </tbody>
           </v-table>
         </div>
-        <div class="tab-apanel" v-if="setting === '운영규칙 설정'">
+        <div class="popup-contents" v-if="setting === '운영규칙 설정'">
           <h3 class="sub-title mb-2">운영규칙 설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '입실시간 옵션'">
+        <div class="popup-contents" v-if="setting === '입실시간 옵션'">
           <h3 class="sub-title mb-2">입실시간 옵션</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '무인판매 설정'">
+        <div class="popup-contents" v-if="setting === '무인판매 설정'">
           <h3 class="sub-title mb-2">무인판매 설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '예약설정'">
+        <div class="popup-contents" v-if="setting === '예약설정'">
           <h3 class="sub-title mb-2">예약설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '포인트 설정'">
+        <div class="popup-contents" v-if="setting === '포인트 설정'">
           <h3 class="sub-title mb-2">포인트 설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '잠금 설정'">
+        <div class="popup-contents" v-if="setting === '잠금 설정'">
           <h3 class="sub-title mb-2">잠금 설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '냉/난방 설정'">
+        <div class="popup-contents" v-if="setting === '냉/난방 설정'">
           <h3 class="sub-title mb-2">냉/난방 설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '구독관리'">
+        <div class="popup-contents" v-if="setting === '구독관리'">
           <h3 class="sub-title mb-2">구독관리</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '화면설정'">
+        <div class="popup-contents" v-if="setting === '화면설정'">
           <h3 class="sub-title mb-2">화면설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '음성설정'">
+        <div class="popup-contents" v-if="setting === '음성설정'">
           <h3 class="sub-title mb-2">음성설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '전원설정'">
+        <div class="popup-contents" v-if="setting === '전원설정'">
           <h3 class="sub-title mb-2">전원설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '알림설정'">
+        <div class="popup-contents" v-if="setting === '알림설정'">
           <h3 class="sub-title mb-2">알림설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === 'PMS 설정'">
+        <div class="popup-contents" v-if="setting === 'PMS 설정'">
           <h3 class="sub-title mb-2">PMS 설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '도어락 설정'">
+        <div class="popup-contents" v-if="setting === '도어락 설정'">
           <h3 class="sub-title mb-2">도어락 설정</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '데이터 관리'">
+        <div class="popup-contents" v-if="setting === '데이터 관리'">
           <h3 class="sub-title mb-2">데이터 관리</h3>
         </div>
-        <div class="tab-apanel" v-if="setting === '직원관리'">
+        <div class="popup-contents" v-if="setting === '직원관리'">
           <h3 class="sub-title mb-2">직원관리</h3>
         </div>
-        <!-- //tab-apanel -->
+        <!-- //popup-contents -->
       </v-card-text>
       <!-- //body -->
       <!-- footer -->
@@ -197,6 +235,8 @@ export default {
   name: "settingEnv",
   data() {
     return {
+      onboarding: 0,
+
       setting: "요금설정",
       tabsItem: [
         "요금설정",
@@ -220,9 +260,16 @@ export default {
     };
   },
   methods: {
-    toggle(val) {
-      this.setting = val;
+    next() {
+      this.onboarding = this.onboarding + 1 > this.length ? 1 : this.onboarding + 1;
     },
+    prev() {
+      this.onboarding = this.onboarding - 1 <= 0 ? this.length : this.onboarding - 1;
+    },
+
+    // toggle(val) {
+    //   this.setting = val;
+    // },
   },
 };
 </script>

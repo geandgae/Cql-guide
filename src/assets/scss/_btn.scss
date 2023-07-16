@@ -11,6 +11,9 @@
   &.v-btn--size-x-large {
     height: 60px !important;
   }
+  .v-btn__content {
+    line-height: 1 !important;
+  }
 }
 
 // custom-btn-icon
@@ -24,5 +27,12 @@
     flex-shrink: 0 !important;
     border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
     padding-left: 8px !important;
+  }
+}
+
+.v-btn.custom-btn-icon-white {
+  border: 1px solid #2c2f35;
+  .v-btn__content { 
+    margin-top: -2px;
   }
 }

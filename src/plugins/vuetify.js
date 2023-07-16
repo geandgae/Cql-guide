@@ -16,14 +16,17 @@ export default createVuetify({
           secondary: '#fc6060',
           darkgrey: '#3c4d60',
           grey: '#5e7892',
+          black: '#2c2f35',
         }
       },
     },
   },
   defaults: {
     VBtn: {
-      // color: 'primary',
       flat: true,
     },
+  },
+  icons: {
+    defaultSet: 'mdi',
   },
 })

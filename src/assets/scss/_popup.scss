@@ -4,6 +4,30 @@
 .popup {
   display: flex;
   flex-direction: column;
+  // theme
+  &.theme-popup-dark {
+    .v-card {
+      .v-card-title {
+        background-color: $g-dark-navy;
+        height: 60px;
+        .title {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.theme-popup-light {
+    .v-card {
+      .v-card-title {
+        height: 55px;
+        .btns {
+          .v-btn {
+            border: 1px solid #d6dbe2;
+          }
+        }
+      }
+    }
+  }
   .v-card {
     flex: 1;
     display: flex;
@@ -12,11 +36,6 @@
     background-color: #f2f5f8;
     .v-card-title {
       flex-shrink: 0;
-      background-color: $g-dark-navy;
-      height: 60px;
-      .title {
-        color: #fff;
-      }
       .chip-bi {
         width: 34px;
         height: 34px;
@@ -59,7 +78,7 @@
           }
         }
       }
-      .tab-apanel {
+      .popup-contents {
         padding: 14px 20px 0;
       }
     }
@@ -76,6 +95,10 @@
   }
   &.size-md {
     width: 950px;
+    min-height: 800px;
+  }
+  &.size-lg {
+    width: 1194px;
     min-height: 800px;
   }
 }

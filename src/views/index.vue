@@ -11,7 +11,7 @@
       <tbody>
         <tr v-for="item, i in td.length" :key="item">
           <td v-for="x, n in td[i]" :key="n">
-            <v-btn v-if="x.to" size="small" style="min-width: 80px" @click="link(x.to)">이동</v-btn>
+            <v-btn v-if="x.to" color="primary" size="small" style="min-width: 80px" @click="link(x.to)">이동</v-btn>
             <!-- <span v-if="x.link === true" style="cursor: pointer;" @click="link(x.to)">{{ x.to }}</span> -->
             <span v-else>{{ x }}</span>
           </td>
@@ -62,7 +62,18 @@ export default {
           status: '완료',
           memo: '대시보드',
         },
-        
+        {
+          type: '-',
+          name: '24.객실정보 관리',
+          depth1: 'management',
+          depth2: '-',
+          depth3: '-',
+          url: {
+            to: '/management/roominfo',
+          },
+          status: '-',
+          memo: '-',
+        },
         {
           type: '01.대시보드',
           name: '02. 예약현황',

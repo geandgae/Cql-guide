@@ -3,6 +3,9 @@
 .v-table {
   font-size: 12px;
   color: #2c2f35 !important;
+  &.text-center {
+    th, td { text-align: center !important }
+  }
   table {
     border: 1px solid #d6dbe2;
     th,
@@ -34,7 +37,7 @@
     th {
       background-color: $g-dark-navy !important;
       color: #fff !important;
-      height: 30px !important;
+      height: 40px !important;
       & + th,
       & + td {
         border-left: 1px solid #64788d;
@@ -42,6 +45,19 @@
     }
     td {
       height: 26px !important;
+      .input {
+        height: 22px;
+      }
+      > div {
+        height: 26px !important;
+      }
+      > .v-input  {
+        .v-selection-control {
+          min-height: 26px !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+      }
     }
     tbody {
       tr:hover {
