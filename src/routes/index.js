@@ -26,25 +26,25 @@ export default createRouter ({
     // management
     {
       path: '/management/roominfo',
-      name: 'setting',
+      name: 'roominfo',
       component: () => import("@/views/management/RoomInfo")
     },
     // setting
-    // {
-    //   path: '/setting',
-    //   name: 'setting',
-    //   component: () => import("@/views/setting/Index")
-    // },
+    {
+      path: '/setting',
+      name: 'setting',
+      component: () => import("@/views/setting/index")
+    },
     // test
     {
-      path: '/setting/popup',
+      path: '/test/popup',
       name: 'popup-test',
-      component: () => import("@/views/setting-test/popup")
+      component: () => import("@/views/test/popup")
     },
     {
-      path: '/setting/env',
+      path: '/test/env',
       name: 'settingEnv',
-      component: () => import("@/views/setting-test/env")
+      component: () => import("@/views/test/env")
     },
   ]
 })

@@ -5,6 +5,11 @@
   color: #2c2f35 !important;
   &.text-center {
     th, td { text-align: center !important }
+    .v-input--horizontal {
+      grid-template-areas: none !important;
+      grid-template-columns: none !important;
+      grid-template-rows: none !important;
+    }
   }
   table {
     border: 1px solid #d6dbe2;

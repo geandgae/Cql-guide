@@ -3,7 +3,7 @@
   <Popup :popup="popup">
     <!-- slot -->
     <template v-slot:body>
-      <!-- popup-contents" -->
+      <!-- popup-contents -->
       <div class="popup-contents">
         <!-- field-set -->
         <fieldset class="field-set">
@@ -39,8 +39,8 @@
         </fieldset>
         <!-- //field-set -->
         <div class="d-flex align-center mt-3">
-          <v-checkbox hide-details density="compact" color="secondary" label="전체선택"></v-checkbox>
-          <v-btn color="white" class="custom-btn-icon-white" prepend-icon="mdi-plus-thick" size="small" style="min-width: 80px">
+          <v-checkbox hide-details density="compact" color="secondary" label="전체선택" class="flex-grow-0"></v-checkbox>
+          <v-btn color="white" class="custom-btn-icon-white ml-auto" prepend-icon="mdi-plus-thick" size="small" style="min-width: 80px" @click="dialog = !dialog">
             <template v-slot:prepend>
               <v-icon size="small" color="pa-0 ma-0"></v-icon>
             </template>
@@ -85,16 +85,16 @@
               <td><input type="text" class="input" style="width: 80px;" /></td>
               <td><input type="text" class="input" style="width: 80px;" /></td>
               <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="가능"></v-checkbox>
+                <v-checkbox hide-details density="compact" color="secondary" label="불가" :model-value="true" disabled></v-checkbox>
               </td>
               <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
+                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
               </td>
               <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
+                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
               </td>
               <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
+                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
               </td>
               <td>
                 <v-btn density="compact" size="small" icon="mdi-trash-can-outline"></v-btn>
@@ -182,10 +182,43 @@
         </fieldset>
         <!-- //field-set -->
       </div>
-      <!-- //popup-contents" -->
+      <!-- //popup-contents -->
     </template>
     <!-- //slot -->
   </Popup>
+  <!-- //popup -->
+
+  <!-- popup -->
+  <v-dialog v-model="dialog" width="auto">
+    <!-- popup -->
+    <Popup :popup="popupAlert">
+      <!-- slot -->
+      <template v-slot:body>
+        <!-- popup-contents -->
+        <div class="popup-contents">
+          <div class="box-border d-flex flex-column align-center justify-center px-8" style="height: 140px;">
+            <div class="mb-5">
+              <v-icon color="secondary" class="mr-2">mdi-alert-circle</v-icon>
+              <span>추가할 객실명을 입력하세요</span>
+            </div>
+            <input type="text" class="input md" />
+          </div>
+        </div>
+        <!-- //popup-contents -->
+      </template>
+      <!-- //slot -->
+      <!-- slot -->
+      <template v-slot:footer>
+        <div class="btns">
+          <v-btn color="primary" size="large" style="min-width: 150px">추가</v-btn>
+          <v-btn color="darkgrey" size="large" style="min-width: 150px" @click="dialog = !dialog">취소</v-btn>
+        </div>
+      </template>
+      <!-- //slot -->
+    </Popup>
+    <!-- //popup -->
+    
+  </v-dialog>
   <!-- //popup -->
 </template>
 
@@ -203,6 +236,12 @@ export default {
       theme: "theme-popup-dark",
       size: "size-lg",
       align: "mx-auto",
+    },
+    popupAlert: {
+      title: "객실추가",
+      theme: "theme-popup-light",
+      size: "size-sm",
+      align: "ml-3 mr-auto",
     },
     dialog: false,
   }),

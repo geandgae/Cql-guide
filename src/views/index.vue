@@ -11,7 +11,19 @@
       <tbody>
         <tr v-for="item, i in td.length" :key="item">
           <td v-for="x, n in td[i]" :key="n">
-            <v-btn v-if="x.to" color="primary" size="small" style="min-width: 80px" @click="link(x.to)">이동</v-btn>
+            <v-btn v-if="x.to" color="darkgrey" size="small" style="min-width: 80px" @click="link(x.to)">이동</v-btn>
+            <div v-else-if="x === '완료'" class="d-flex align-center">
+              <v-icon color="primary">mdi-alert-circle</v-icon>
+              <span class="ml-1 color-primary">{{ x }}</span>
+            </div>
+            <div v-else-if="x === '대기'" class="d-flex align-center">
+              <v-icon color="secondary">mdi-alert-circle</v-icon>
+              <span class="ml-1 color-secondary">{{ x }}</span>
+            </div>
+            <div v-else-if="x === '진행중'" class="d-flex align-center">
+              <v-icon color="darkgrey">mdi-alert-circle</v-icon>
+              <span class="ml-1 color-darkgrey">{{ x }}</span>
+            </div>
             <!-- <span v-if="x.link === true" style="cursor: pointer;" @click="link(x.to)">{{ x.to }}</span> -->
             <span v-else>{{ x }}</span>
           </td>
@@ -66,12 +78,12 @@ export default {
           type: '-',
           name: '24.객실정보 관리',
           depth1: 'management',
-          depth2: '-',
+          depth2: 'roominfo',
           depth3: '-',
           url: {
             to: '/management/roominfo',
           },
-          status: '-',
+          status: '완료',
           memo: '-',
         },
         {
@@ -342,18 +354,6 @@ export default {
         },
         {
           type: '',
-          name: '23.객실정보관리',
-          depth1: 'room',
-          depth2: 'room_info',
-          depth3: '-',
-          url: {
-            to: '/room/room_info',
-          },
-          status: '대기',
-          memo: '-',
-        },
-        {
-          type: '',
           name: '24.객실타입관리',
           depth1: 'room',
           depth2: 'room_type',
@@ -472,23 +472,9 @@ export default {
           status: '대기',
           memo: '-',
         },
-
         {
-          type: '0.3.환경설정',
-          name: '34. 초기화면',
-          depth1: 'setting',
-          depth2: 'env',
-          depth3: '-',
-          url: {
-            to: '/setting/env',
-          },
-          status: '대기',
-          memo: '-',
-        },
-
-        {
-          type: '',
-          name: '34. 요금설정-객실 추가/할인 요금 설정',
+          type: '-',
+          name: '35. 요금설정-객실 추가/할인 요금 설정',
           depth1: 'timeline',
           depth2: 'index',
           depth3: '-',
@@ -499,8 +485,8 @@ export default {
           memo: '-',
         },
         {
-          type: '',
-          name: '35. 요금설정-무인판매 시간/추가 요금 설정',
+          type: '-',
+          name: '36. 요금설정-무인판매 시간/추가 요금 설정',
           depth1: 'timeline',
           depth2: 'timeline_page',
           depth3: '-',
@@ -510,11 +496,9 @@ export default {
           status: '대기',
           memo: '-',
         },
-
-
         {
-          type: '',
-          name: '36.카드데크 키 현황 보기',
+          type: '-',
+          name: '40.카드데크 키 현황 보기',
           depth1: 'setting',
           depth2: 'key_status',
           depth3: '-',
@@ -522,6 +506,18 @@ export default {
             to: '/setting/key_status',
           },
           status: '대기',
+          memo: '-',
+        },
+        {
+          type: '03.환경설정',
+          name: '34, 37, 38, 39, 41 ~ 54',
+          depth1: 'setting',
+          depth2: 'index',
+          depth3: '-',
+          url: {
+            to: '/setting/',
+          },
+          status: '진행중',
           memo: '-',
         },
       ],

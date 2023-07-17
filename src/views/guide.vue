@@ -231,6 +231,16 @@
     <!-- form -->
     <div v-if="tab === 'form'" class="py-10">
       <h2 class="mb-2">form</h2>
+
+      <input type="text" class="input sm" />
+      <br>
+      <br>
+      <input type="text" class="input" />
+      <br>
+      <br>
+      <input type="text" class="input md" />
+      <br>
+      <br>
       <!-- field-set -->
       <fieldset class="field-set">
         <h3 class="field-title mb-2">QR코드 키 발급</h3>
@@ -301,14 +311,27 @@
             <tr>
               <th class="text-center">기본설정</th>
               <td>
-                <div class="input-counter" style="width: 120px">
-                  <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                    <v-icon size="x-small" color="white">mdi-minus</v-icon>
-                  </v-btn>
-                  <input type="text" value="14" />
-                  <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                    <v-icon size="x-small" color="white">mdi-plus</v-icon>
-                  </v-btn>
+                <div class="d-flex align-center">
+                  <div class="input-counter" style="width: 120px">
+                    <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                      <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
+                    </v-btn>
+                    <input type="text" value="14" />
+                    <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                      <v-icon size="x-small" color="white">mdi-chevron-up</v-icon>
+                    </v-btn>
+                  </div>
+                  <div class="input-counter ml-2" style="width: 120px">
+                    <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                      <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
+                    </v-btn>
+                    <input type="text" value="14" />
+                    <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                      <v-icon size="x-small" color="white">mdi-chevron-up</v-icon>
+                    </v-btn>
+                  </div>
+                  <span class="ml-2">전 부터 입실 가능</span>
+                  <span class="ml-5 color-secondary">(2022년 04월 05일 14시 25분 이내 표시됩니다.)</span>
                 </div>
               </td>
               <th class="text-center">좌측메뉴</th>
@@ -393,12 +416,19 @@
             <tr>
               <th class="text-center">아이디</th>
               <td>
+                <!-- <select class="select-custom">
+                  <option value="">층 선택</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select> -->
                 <v-select 
                   :items="['select1', 'select2', 'select3', 'select4', 'select5']"
-                  value="select2"
+                  value="select1"
                   density="compact"
                   hide-details
-                  variant="outlined">
+                  style="width: 200px;"
+                >
                 </v-select>
               </td>
               <th class="text-center">검색</th>
@@ -407,6 +437,30 @@
                   <input type="text" value="14" />
                   <v-btn density="compact" size="small" icon="mdi-magnify"></v-btn>
                 </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="text-center">아이디</th>
+              <td>
+                <v-select 
+                  :items="['select1', 'select2', 'select3', 'select4', 'select5']"
+                  value="select2"
+                  density="compact"
+                  class="custom-select"
+                  hide-details>
+                </v-select>
+              </td>
+              <th class="text-center">검색</th>
+              <td>
+                <v-select
+                  :items="['foo', 'bar', 'fizz', 'buzz', 'fizzbuzz', 'foobar']"
+                  value="foo"
+                  density="compact"
+                  hide-details>
+                  <template v-slot:selection="{ item }">
+                    <span>{{ item.title }}</span>
+                  </template>
+                </v-select>
               </td>
             </tr>
           </tbody>
@@ -549,7 +603,8 @@
 
     <!-- icon -->
     <div v-if="tab === 'icon'" class="py-10">
-      <h2>icon</h2>
+      <h2 class="mb-2">icon</h2>
+      <v-icon color="secondary">mdi-alert-circle</v-icon>
     </div>
   </v-container>
 </template>
