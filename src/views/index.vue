@@ -63,7 +63,7 @@ export default {
           memo: '-',
         },
         {
-          type: '메인',
+          type: 'div 작업',
           name: '01.대시보드',
           depth1: 'home',
           depth2: '-',
@@ -72,20 +72,69 @@ export default {
             to: '/app-main',
           },
           status: '완료',
-          memo: '대시보드',
+          memo: 'div 작업',
         },
         {
-          type: '-',
-          name: '24.객실정보 관리',
-          depth1: 'management',
-          depth2: 'roominfo',
+          type: 'div 작업',
+          name: '21.객실타임머신',
+          depth1: 'room',
+          depth2: 'index',
           depth3: '-',
           url: {
-            to: '/management/roominfo',
+            to: '/room/index',
           },
-          status: '완료',
+          status: '대기',
+          memo: 'div 작업',
+        },
+        {
+          type: 'div 작업',
+          name: '11.메인',
+          depth1: 'room',
+          depth2: 'index',
+          depth3: '-',
+          url: {
+            to: '/room/index',
+          },
+          status: '대기',
+          memo: 'div 작업',
+        },
+        {
+          type: 'div 작업',
+          name: '22.설정메뉴',
+          depth1: 'management',
+          depth2: 'index',
+          depth3: '-',
+          url: {
+            to: '/management/index',
+          },
+          status: '대기',
           memo: '-',
         },
+        {
+          type: 'div 작업',
+          name: '35. 요금설정-객실 추가/할인 요금 설정',
+          depth1: 'timeline',
+          depth2: 'index',
+          depth3: '-',
+          url: {
+            to: '/timeline/index',
+          },
+          status: '대기',
+          memo: '-',
+        },
+        {
+          type: 'div 작업',
+          name: '36. 요금설정-무인판매 시간/추가 요금 설정',
+          depth1: 'timeline',
+          depth2: 'timeline_page',
+          depth3: '-',
+          url: {
+            to: '/timeline/timeline_page',
+          },
+          status: '대기',
+          memo: '-',
+        },
+
         {
           type: '01.대시보드',
           name: '02. 예약현황',
@@ -195,20 +244,9 @@ export default {
           memo: '-',
         },
 
+        
         {
-          type: '02.객실관리',
-          name: '11.메인',
-          depth1: 'room',
-          depth2: 'index',
-          depth3: '-',
-          url: {
-            to: '/room/index',
-          },
-          status: '대기',
-          memo: '객실관리메인',
-        },
-        {
-          type: '',
+          type: '2.객실관리',
           name: '12.입실처리',
           depth1: 'room',
           depth2: 'checkIn',
@@ -328,21 +366,10 @@ export default {
           memo: '',
         },
 
+        
         {
           type: '',
-          name: '21.객실타임머신',
-          depth1: 'room',
-          depth2: 'index',
-          depth3: '-',
-          url: {
-            to: '/room/index',
-          },
-          status: '대기',
-          memo: '-',
-        },
-        {
-          type: '',
-          name: '22.포인트이력조회',
+          name: '23.포인트이력조회',
           depth1: 'room',
           depth2: 'point_list',
           depth3: '-',
@@ -352,9 +379,23 @@ export default {
           status: '대기',
           memo: '-',
         },
+        
+        {
+          type: '-',
+          name: '24.객실정보 관리',
+          depth1: 'management',
+          depth2: 'roominfo',
+          depth3: '-',
+          url: {
+            to: '/management/roominfo',
+          },
+          status: '완료',
+          memo: '-',
+        },
+
         {
           type: '',
-          name: '24.객실타입관리',
+          name: '25.객실타입 관리',
           depth1: 'room',
           depth2: 'room_type',
           depth3: '-',
@@ -366,7 +407,7 @@ export default {
         },
         {
           type: '',
-          name: '25.일괄처리',
+          name: '26.일괄처리',
           depth1: 'room',
           depth2: 'room_status',
           depth3: '-',
@@ -378,7 +419,7 @@ export default {
         },
         {
           type: '',
-          name: '26.포인트 관리',
+          name: '27.포인트 관리',
           depth1: 'room',
           depth2: 'point_management',
           depth3: '-',
@@ -390,7 +431,7 @@ export default {
         },
         {
           type: '',
-          name: '27.예약관리',
+          name: '28.예약관리',
           depth1: 'room',
           depth2: 'room_reservation',
           depth3: '-',
@@ -402,7 +443,7 @@ export default {
         },
         {
           type: '',
-          name: '28.예약등록',
+          name: '29.예약등록',
           depth1: 'room',
           depth2: 'room_registration',
           depth3: '-',
@@ -472,28 +513,17 @@ export default {
           status: '대기',
           memo: '-',
         },
+        
         {
-          type: '-',
-          name: '35. 요금설정-객실 추가/할인 요금 설정',
-          depth1: 'timeline',
+          type: '03.환경설정',
+          name: '34, 37, 38, 39, 41 ~ 54',
+          depth1: 'setting',
           depth2: 'index',
           depth3: '-',
           url: {
-            to: '/timeline/index',
+            to: '/setting/',
           },
-          status: '대기',
-          memo: '-',
-        },
-        {
-          type: '-',
-          name: '36. 요금설정-무인판매 시간/추가 요금 설정',
-          depth1: 'timeline',
-          depth2: 'timeline_page',
-          depth3: '-',
-          url: {
-            to: '/timeline/timeline_page',
-          },
-          status: '대기',
+          status: '진행중',
           memo: '-',
         },
         {
@@ -506,18 +536,6 @@ export default {
             to: '/setting/key_status',
           },
           status: '대기',
-          memo: '-',
-        },
-        {
-          type: '03.환경설정',
-          name: '34, 37, 38, 39, 41 ~ 54',
-          depth1: 'setting',
-          depth2: 'index',
-          depth3: '-',
-          url: {
-            to: '/setting/',
-          },
-          status: '진행중',
           memo: '-',
         },
       ],
