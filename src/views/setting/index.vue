@@ -40,7 +40,7 @@
       <div class="popup-contents" v-if="setting === '포인트 설정'">
         <SetPoint></SetPoint>
       </div>
-      <div class="popup-contents" v-if="setting === '잠금 설정'">
+      <div class="popup-contents" v-if="setting === '잠금설정'">
         <SetLock></SetLock>
       </div>
       <div class="popup-contents" v-if="setting === '냉/난방 설정'">
@@ -138,7 +138,7 @@ export default {
         "무인판매 설정",
         "예약설정",
         "포인트 설정",
-        "잠금 설정",
+        "잠금설정",
         "냉/난방 설정",
         "구독관리",
         "화면설정",
