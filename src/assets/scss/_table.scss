@@ -40,7 +40,7 @@
   }
   &.dense-dark {
     th {
-      background-color: $g-dark-navy !important;
+      background-color: $g-darknavy !important;
       color: #fff !important;
       height: 40px !important;
       & + th,
@@ -73,6 +73,11 @@
       tr.active {
         td {
           background-color: #dbe3ee;
+        }
+      }
+      tr.newapp {
+        td {
+          background-color: #fbf6c7;
         }
       }
     }

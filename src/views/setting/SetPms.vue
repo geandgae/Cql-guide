@@ -18,7 +18,7 @@
   <fieldset class="field-set">
     <h3 class="field-title mb-2">PMS 소켓 연동 인증 KEY (Micronic)</h3>
     <div class="field-box" style=" height: 100px;">
-      <input type="text" class="input" style="height: 80px;" />
+      <textarea class="textarea" style="height: 80px;"></textarea>
     </div>
   </fieldset>
 

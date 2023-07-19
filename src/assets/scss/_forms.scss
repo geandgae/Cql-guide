@@ -1,45 +1,18 @@
 @charset "utf-8";
 
-// font color 임시
-.color-primary {
-  color: $g-primary !important;
-}
-.color-secondary {
-  color: $g-secondary !important;
-}
-.color-darkgrey {
-  color: $g-dark-navy !important;
-}
-.title {
-  font-size: 18px;
-  font-weight: 700;
-}
-.title-sub {
-  font-size: 14px;
-  font-weight: 700;
-}
-.body-1 {
-  font-size: 14px;
-  font-weight: 400;
-}
-.bbs-title {
-  background-color: $g-dark-navy;
-  height: 40px;
-  padding: 0 20px;
-  border-radius: 3px;
-  color: #fff;
-  .text {
-    font-size: 16px;
-    font-weight: 500;
-    margin-right: auto;
-  }
+hr {
+  border:0;
+  height:1px !important;
+  background-color: #d6dbe2 !important;
 }
 
 .field-set {
   border: none;
   font-weight: 400;
-  min-width: fit-content;
-  width: 100%;
+  .field-inner {
+    min-width: fit-content;
+    width: 100%;
+  }
   & + .field-set {
     margin-top: 16px;
   }
@@ -71,11 +44,6 @@
       display: flex;
       align-items: center;
     }
-  }
-  .hr {
-    width: 100%;
-    margin-top: 14px;
-    border-bottom: 1px solid #d6dbe2;
   }
 }
 
@@ -109,6 +77,20 @@
   }
   &.md {
     height: 40px;
+  }
+}
+
+.textarea {
+  width: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #d6dbe2;
+  min-height: 50px;
+  color: #2c2f35;
+  padding: 0 10px;
+  vertical-align: middle;
+  resize: none;
+  &:focus {
+    outline: none;
   }
 }
 

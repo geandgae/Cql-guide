@@ -16,7 +16,7 @@ export default createRouter ({
     {
       path: '/guide',
       name: 'guideList',
-      component: () => import("@/views/guide")
+      component: () => import("@/views/guide/guide")
     },
     {
       path: '/app-main',

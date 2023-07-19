@@ -23,47 +23,48 @@
     </div>
   </fieldset>
 
-  <div class="d-flex align-center" style="gap: 10px">
-    <fieldset class="field-set mt-4">
+  <fieldset class="field-set d-flex w-100" style="gap: 8px">
+    <div class="field-inner">
       <h3 class="field-title mb-2">도어 음성 설정</h3>
       <div class="field-box">
         <v-checkbox hide-details density="compact" color="secondary" label="객실문 닫힘"></v-checkbox>
         <v-checkbox hide-details density="compact" color="secondary" label="객실문 열림"></v-checkbox>
       </div>
-    </fieldset>
-    <fieldset class="field-set">
+    </div>
+    <div class="field-inner">
       <h3 class="field-title mb-2">청소 음성 설정</h3>
       <div class="field-box">
         <v-checkbox hide-details density="compact" color="secondary" label="청소요청"></v-checkbox>
         <v-checkbox hide-details density="compact" color="secondary" label="청소완료"></v-checkbox>
       </div>
-    </fieldset>
-    <fieldset class="field-set">
+    </div>
+    <div class="field-inner">
       <h3 class="field-title mb-2">전원 음성 설정</h3>
       <div class="field-box">
         <v-checkbox hide-details density="compact" color="secondary" label="전원차단"></v-checkbox>
         <v-checkbox hide-details density="compact" color="secondary" label="전원공급"></v-checkbox>
       </div>
-    </fieldset>
-    <fieldset class="field-set">
+    </div>
+    <div class="field-inner">
       <h3 class="field-title mb-2">차량호출 음성 설정</h3>
       <div class="field-box">
         <v-checkbox hide-details density="compact" color="secondary" label="배차요청"></v-checkbox>
         <v-checkbox hide-details density="compact" color="secondary" label="배차완료"></v-checkbox>
       </div>
-    </fieldset>
-  </div>
+    </div>
+  </fieldset>
 
-  <div class="d-flex align-center" style="gap: 10px">
-    <fieldset class="field-set mt-4" style="width: fit-content">
+  
+  <fieldset class="field-set d-flex w-100" style="gap: 8px">
+    <div class="field-inner">
       <h3 class="field-title mb-2" style="width: 300px !important">인스펙트(점검) 음성 설정</h3>
       <div class="field-box">
         <v-checkbox hide-details density="compact" color="secondary" label="점검대기"></v-checkbox>
         <v-checkbox hide-details density="compact" color="secondary" label="점검 중"></v-checkbox>
         <v-checkbox hide-details density="compact" color="secondary" label="점검완료"></v-checkbox>
       </div>
-    </fieldset>
-    <fieldset class="field-set">
+    </div>
+    <div class="field-inner">
       <h3 class="field-title mb-2">기타 효과음 설정 여부</h3>
       <div class="field-box">
         <v-checkbox hide-details density="compact" color="secondary" label="숙박/대실 상태"></v-checkbox>
@@ -73,17 +74,15 @@
         <v-checkbox hide-details density="compact" color="secondary" label="외출"></v-checkbox>
         <v-checkbox hide-details density="compact" color="secondary" label="외출복귀"></v-checkbox>
       </div>
-    </fieldset>
-  </div>
-
-  <fieldset class="field-set">
-    <div class="hr"></div>
+    </div>
   </fieldset>
 
+  <hr class="mt-4 mb-1">
+
   <fieldset class="field-set">
-    <div class="d-flex">
-      <h3 class="field-title mb-2 mr-2 pt-2">기타설정</h3>
-      <v-checkbox hide-details density="compact" color="secondary" label="외출복귀"></v-checkbox>
+    <div class="d-flex align-center">
+      <h3 class="field-title mr-2">기타설정</h3>
+      <v-checkbox hide-details density="compact" color="secondary" label="객실타입명 음성 출력"></v-checkbox>
     </div>
 
     <v-table>

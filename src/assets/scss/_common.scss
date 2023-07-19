@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+// font color
+.color-primary {
+  color: $g-primary !important;
+}
+.color-secondary {
+  color: $g-secondary !important;
+}
+.color-white {
+  color: $g-white !important;
+}
+.color-black {
+  color: $g-black !important;
+}
+.color-darknavy {
+  color: $g-darknavy !important;
+}
+.color-grey {
+  color: $g-grey !important;
+}
+.color-darkgrey {
+  color: $g-darkgrey !important;
+}
+.color-deepgrey {
+  color: $g-deepgrey !important;
+}
+.color-red {
+  color: $g-red !important;
+}
+.color-violet {
+  color: $g-violet !important;
+}
+.color-pink {
+  color: $g-pink !important;
+}
+.color-yellow {
+  color: $g-yellow !important;
+}
+.color-green {
+  color: $g-green !important;
+}
+.color-lightblue {
+  color: $g-lightblue !important;
+}
+.color-mint {
+  color: $g-mint !important;
+}
+.color-aqua {
+  color: $g-aqua !important;
+}
+.color-navy {
+  color: $g-navy !important;
+}
+
+// font
+.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.title-sub {
+  font-size: 14px;
+  font-weight: 700;
+}
+.body-1 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.bbs-title {
+  background-color: $g-darknavy;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 3px;
+  color: #fff;
+  .text {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: auto;
+  }
+}
+.number {
+  font-size: 14px;
+  font-family: "sebangb";
+  &.md {
+    font-size: 20px;
+  }
+  &.lg {
+    font-size: 26px;
+  }
+}
