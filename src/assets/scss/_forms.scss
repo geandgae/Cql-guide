@@ -38,12 +38,17 @@
 .field-set {
   border: none;
   font-weight: 400;
+  min-width: fit-content;
+  width: 100%;
   & + .field-set {
     margin-top: 16px;
   }
   .field-title {
     font-size: 12px;
     font-weight: 500;
+  }
+  .field-content {
+    font-size: 12px;
   }
   .field-box {
     background-color: #fff;
@@ -66,6 +71,11 @@
       display: flex;
       align-items: center;
     }
+  }
+  .hr {
+    width: 100%;
+    margin-top: 14px;
+    border-bottom: 1px solid #d6dbe2;
   }
 }
 

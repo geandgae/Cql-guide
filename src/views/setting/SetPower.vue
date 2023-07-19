@@ -36,7 +36,7 @@
                   <v-icon size="x-small" color="white">mdi-chevron-up</v-icon>
                 </v-btn>
               </div>
-              <div class="ml-2">분 후 전원 차단 <span class="color-secondary ml-4">(※0분 이면 계속 표시)</span></div>
+              <div class="ml-2">분 후 전원 차단 <span class="color-secondary ml-2">(※0분 이면 계속 표시)</span></div>
             </div>
           </td>
         </tr>

@@ -10,11 +10,11 @@
             <div class="d-flex align-center">
               <div class="input-counter" style="width: 120px">
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-minus</v-icon>
+                  <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
                 </v-btn>
                 <input type="text" value="30도" />
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-plus</v-icon>
+                  <v-icon size="x-small" color="white">mdi-chevron-up</v-icon>
                 </v-btn>
               </div>
             </div>
@@ -54,11 +54,11 @@
             <div class="d-flex align-center">
               <div class="input-counter" style="width: 120px">
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-minus</v-icon>
+                  <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
                 </v-btn>
                 <input type="text" value="24도" />
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-plus</v-icon>
+                  <v-icon size="x-small" color="white">mdi-chevron-up</v-icon>
                 </v-btn>
               </div>
             </div>
@@ -92,11 +92,11 @@
             <div class="d-flex align-center">
               <div class="input-counter" style="width: 120px">
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-minus</v-icon>
+                  <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
                 </v-btn>
                 <input type="text" value="20도" />
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-plus</v-icon>
+                  <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
                 </v-btn>
               </div>
             </div>
@@ -110,7 +110,7 @@
                 </v-btn>
                 <input type="text" value="35도" />
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-chevron-up</v-icon>
+                  <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
                 </v-btn>
               </div>
             </div>

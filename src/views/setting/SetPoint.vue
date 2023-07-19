@@ -57,11 +57,11 @@
             <div class="d-flex align-center">
               <div class="input-counter" style="width: 120px">
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
+                  <v-icon size="x-small" color="white">mdi-minus</v-icon>
                 </v-btn>
                 <input type="text" value="5%" />
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-chevron-up</v-icon>
+                  <v-icon size="x-small" color="white">mdi-plus</v-icon>
                 </v-btn>
               </div>
               <div class="ml-2">적립</div>
@@ -89,11 +89,11 @@
             <div class="d-flex align-center">
               <div class="input-counter" style="width: 120px">
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-chevron-down</v-icon>
+                  <v-icon size="x-small" color="white">mdi-minus</v-icon>
                 </v-btn>
                 <input type="text" value="3%" />
                 <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
-                  <v-icon size="x-small" color="white">mdi-chevron-up</v-icon>
+                  <v-icon size="x-small" color="white">mdi-plus</v-icon>
                 </v-btn>
               </div>
               <div class="ml-2">추가 적립</div>
