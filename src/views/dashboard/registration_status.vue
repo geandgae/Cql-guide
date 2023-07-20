@@ -19,10 +19,11 @@
                 hide-details
                 style="margin-left: -1px;">
               </v-select>
-              <div class="input-search board" style="margin-left: -1px;">
+              <div class="input-search board" style="margin-left: -1px;width: 214px;">
                 <input type="text" value="여기 어때" />
                 <v-btn density="compact" size="small" icon="mdi-magnify"></v-btn>
               </div>
+              <v-btn color="primary ml-2" style="min-width: 86px;">나의구독채널</v-btn>
             </v-row>
           </v-container>
         </fieldset>
@@ -205,171 +206,74 @@
         </div>
         <div class="pop-contents" v-if="setting === '신규 및 추천'" style="padding: 0;">
           <!-- v-container -->
-          <v-container fluid class="board_panel">
+          <v-container fluid class="board_panel" style="max-height: 512px;overflow-y: scroll;">
             <v-row no-gutters>
-              <!-- table -->
-              <v-table fixed-header height="480" class="overflow-y-auto no-border">
-              <colgroup>
-                <col style="width: 100px;"/>
-                <col />
-                <col style="width: 100px;"/>
-              </colgroup>
-              <tbody>
-                <tr>
-                  <td><span>[공지]</span></td>
-                  <td><div>공지사항입니다. 공지 제목이 표시 됩니다.<span class="new">N</span></div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-primary">[업데이트]</span></td>
-                  <td><div>체규인 매니저 2.01 업데이트 안내입니다.<span class="new">N</span></div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-secondary">[중요]</span></td>
-                  <td>
-                    <div>공지 내용 어쩌구 저쩌구 공지사항 제목이 표시됩니다.</div>
-                    <div><span>└</span><span class="text-secondary ml-2">댓글: 처리하였습니다. 점검 부탁드립니다.</span></div>
-                  </td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span>[공지]</span></td>
-                  <td><div>공지사항입니다. 공지 제목이 표시 됩니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-primary">[업데이트]</span></td>
-                  <td><div>체규인 매니저 2.01 업데이트 안내입니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-secondary">[중요]</span></td>
-                  <td>
-                    <div>공지 내용 어쩌구 저쩌구 공지사항 제목이 표시됩니다.</div>
-                    <div><span>└</span><span class="text-secondary ml-2">댓글: 처리하였습니다. 점검 부탁드립니다.</span></div>
-                  </td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span>[공지]</span></td>
-                  <td><div>공지사항입니다. 공지 제목이 표시 됩니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-primary">[업데이트]</span></td>
-                  <td><div>체규인 매니저 2.01 업데이트 안내입니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-secondary">[중요]</span></td>
-                  <td>
-                    <div>공지 내용 어쩌구 저쩌구 공지사항 제목이 표시됩니다.</div>
-                    <div><span>└</span><span class="text-secondary ml-2">댓글: 처리하였습니다. 점검 부탁드립니다.</span></div>
-                  </td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span>[공지]</span></td>
-                  <td><div>공지사항입니다. 공지 제목이 표시 됩니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-primary">[업데이트]</span></td>
-                  <td><div>체규인 매니저 2.01 업데이트 안내입니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-secondary">[중요]</span></td>
-                  <td>
-                    <div>공지 내용 어쩌구 저쩌구 공지사항 제목이 표시됩니다.</div>
-                    <div><span>└</span><span class="text-secondary ml-2">댓글: 처리하였습니다. 점검 부탁드립니다.</span></div>
-                  </td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span>[공지]</span></td>
-                  <td><div>공지사항입니다. 공지 제목이 표시 됩니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-primary">[업데이트]</span></td>
-                  <td><div>체규인 매니저 2.01 업데이트 안내입니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-secondary">[중요]</span></td>
-                  <td>
-                    <div>공지 내용 어쩌구 저쩌구 공지사항 제목이 표시됩니다.</div>
-                    <div><span>└</span><span class="text-secondary ml-2">댓글: 처리하였습니다. 점검 부탁드립니다.</span></div>
-                  </td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span>[공지]</span></td>
-                  <td><div>공지사항입니다. 공지 제목이 표시 됩니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-primary">[업데이트]</span></td>
-                  <td><div>체규인 매니저 2.01 업데이트 안내입니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-secondary">[중요]</span></td>
-                  <td>
-                    <div>공지 내용 어쩌구 저쩌구 공지사항 제목이 표시됩니다.</div>
-                    <div><span>└</span><span class="text-secondary ml-2">댓글: 처리하였습니다. 점검 부탁드립니다.</span></div>
-                  </td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span>[공지]</span></td>
-                  <td><div>공지사항입니다. 공지 제목이 표시 됩니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-primary">[업데이트]</span></td>
-                  <td><div>체규인 매니저 2.01 업데이트 안내입니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-secondary">[중요]</span></td>
-                  <td>
-                    <div>공지 내용 어쩌구 저쩌구 공지사항 제목이 표시됩니다.</div>
-                    <div><span>└</span><span class="text-secondary ml-2">댓글: 처리하였습니다. 점검 부탁드립니다.</span></div>
-                  </td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span>[공지]</span></td>
-                  <td><div>공지사항입니다. 공지 제목이 표시 됩니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-primary">[업데이트]</span></td>
-                  <td><div>체규인 매니저 2.01 업데이트 안내입니다.</div></td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                <tr>
-                  <td><span class="text-secondary">[중요]</span></td>
-                  <td>
-                    <div>공지 내용 어쩌구 저쩌구 공지사항 제목이 표시됩니다.</div>
-                    <div><span>└</span><span class="text-secondary ml-2">댓글: 처리하였습니다. 점검 부탁드립니다.</span></div>
-                  </td>
-                  <td class="right"><span class="gray">12/24/10:36</span></td>
-                </tr>
-                
-              </tbody>
-              </v-table>
-              <!--// table -->
+              <!-- d-flex -->
+              <div class="d-flex justify-space-between mb-3" style="width: 100%;">
+                <v-sheet class="subscribe-card">
+                  <div class="title-area mb-2">
+                    <h3 class="title">제목이 표시됩니다.</h3>
+                    <div class="btn-area">
+                      <span class="sub-title mr-2">구독 채널명</span>
+                      <v-btn class="btn" color="secondary" size="small" >+ 구독</v-btn>
+                    </div>
+                  </div>
+                  <div class="img-area">
+                    이미지 및 상세내용<br>(가격안내)
+                  </div>
+                </v-sheet>
+                <v-sheet class="subscribe-card mb-3">
+                  <div class="title-area mb-2">
+                    <h3 class="title">제목이 표시됩니다.</h3>
+                    <div class="btn-area">
+                      <span class="sub-title mr-2">구독 채널명</span>
+                      <v-btn class="btn" color="secondary" size="small" >+ 구독</v-btn>
+                    </div>
+                  </div>
+                  <div class="img-area">
+                    이미지 및 상세내용<br>(가격안내)
+                  </div>
+                </v-sheet>
+              </div>
+              <!--// d-flex -->
             </v-row>
+            <v-row no-gutters>
+              <!-- d-flex -->
+              <div class="d-flex justify-space-between mb-3" style="width: 100%;">
+                <v-sheet class="subscribe-card">
+                  <div class="title-area mb-2">
+                    <h3 class="title">제목이 표시됩니다.</h3>
+                    <div class="btn-area">
+                      <span class="sub-title mr-2">구독 채널명</span>
+                      <v-btn class="btn" color="secondary" size="small" >+ 구독</v-btn>
+                    </div>
+                  </div>
+                  <div class="img-area">
+                    이미지 및 상세내용<br>(가격안내)
+                  </div>
+                </v-sheet>
+                <v-sheet class="subscribe-card mb-3">
+                  <div class="title-area mb-2">
+                    <h3 class="title">제목이 표시됩니다.</h3>
+                    <div class="btn-area">
+                      <span class="sub-title mr-2">구독 채널명</span>
+                      <v-btn class="btn" color="secondary" size="small" >+ 구독</v-btn>
+                    </div>
+                  </div>
+                  <div class="img-area">
+                    이미지 및 상세내용<br>(가격안내)
+                  </div>
+                </v-sheet>
+              </div>
+              <!--// d-flex -->
+            </v-row>
+
           </v-container>
           <!--// v-container -->
         </div>
         <!-- pagination -->
         <div class="text-center page-navigation">
-            <v-pagination v-model="page" :length="4" rounded="circle"></v-pagination>
+            <v-pagination v-model="page" :length="5" rounded="circle"></v-pagination>
           </div>
           <!-- /pagination -->
         <!-- //table -->

@@ -156,8 +156,8 @@ export default {
           url: {
             to: '/dashboard/ISGA',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -168,8 +168,8 @@ export default {
           url: {
             to: '/dashboard/hotel_news',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -190,10 +190,10 @@ export default {
           depth2: 'notice',
           depth3: '-',
           url: {
-            to: '/dashboard/notice',
+            to: '/dashboard/notice_news',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -202,7 +202,7 @@ export default {
           depth2: 'notice_view',
           depth3: '-',
           url: {
-            to: '/dashboard/notice_view',
+            to: '/dashboard/notice_news_view',
           },
           status: '대기',
           memo: '-',
@@ -216,8 +216,8 @@ export default {
           url: {
             to: '/dashboard/subscribe_status',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -228,8 +228,8 @@ export default {
           url: {
             to: '/dashboard/subscribe_status_channel',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -492,18 +492,6 @@ export default {
         {
           type: '',
           name: '32.A/S 건의사항-건의등록',
-          depth1: 'room',
-          depth2: 'board_as_write',
-          depth3: '-',
-          url: {
-            to: '/room/board_as_write',
-          },
-          status: '대기',
-          memo: '-',
-        },
-        {
-          type: '',
-          name: '33.A/S 건의사항-건의등록',
           depth1: 'room',
           depth2: 'board_as_write',
           depth3: '-',

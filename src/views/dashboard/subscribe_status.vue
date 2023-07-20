@@ -7,243 +7,319 @@
       <div class="popup-contents">
         <!-- field-set -->
         <fieldset class="field-set">
-          <h3 class="title-sub mb-4">객실정보 변경</h3>
-          <v-table>
-            <colgroup>
-              <col style="width: 110px" />
-              <col />
-              <col style="width: 110px" />
-              <col />
-            </colgroup>
-            <tbody>
-              <tr>
-                <th class="text-center">객실타입 선택</th>
-                <td>
-                  <v-radio-group hide-details density="compact" inline>
-                    <v-radio color="secondary" label="VIP룸" value="VIP룸"></v-radio>
-                    <v-radio color="secondary" label="스위트룸" value="스위트룸" class="ml-4"></v-radio>
-                    <v-radio color="secondary" label="일반실" value="일반실" class="ml-4"></v-radio>
-                    <v-radio color="secondary" label="없음" value="없음" class="ml-4"></v-radio>
-                  </v-radio-group>
-                </td>
-                <th class="text-center">검색</th>
-                <td>
-                  <div class="input-search">
-                    <input type="text" />
-                    <v-btn density="compact" size="small" icon="mdi-magnify"></v-btn>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </v-table>
+          <v-container fluid style="padding: 0 12px;">
+            <v-row>
+              <VueDatePicker v-model="date" style="width:140px;border-radius: 0;"></VueDatePicker>
+              <VueDatePicker v-model="date" style="width:140px;border-radius: 0;margin-left: -1px;"></VueDatePicker>
+              <v-select 
+                :items="['공지', '업데이트', '중요']" 
+                value="구분선택" 
+                density="compact" 
+                class="board" 
+                hide-details
+                style="margin-left: -1px;">
+              </v-select>
+              <div class="input-search board" style="margin-left: -1px;width: 214px;">
+                <input type="text" value="여기 어때" />
+                <v-btn density="compact" size="small" icon="mdi-magnify"></v-btn>
+              </div>
+              <v-btn color="primary ml-2" style="min-width: 86px;">나의구독채널</v-btn>
+            </v-row>
+          </v-container>
         </fieldset>
         <!-- //field-set -->
-        <div class="d-flex align-center mt-3">
-          <v-checkbox hide-details density="compact" color="secondary" label="전체선택" class="flex-grow-0"></v-checkbox>
-          <v-btn color="white" class="custom-btn-icon-white ml-auto" prepend-icon="mdi-plus-thick" size="small" style="min-width: 80px" @click="dialog = !dialog">
-            <template v-slot:prepend>
-              <v-icon size="small" color="pa-0 ma-0"></v-icon>
-            </template>
-            객실추가
-          </v-btn>
+        <!-- tabs -->
+        <v-item-group v-model="setting" class="board_tabs two mt-6" style="padding: 0;">
+          <div v-for="item in tabsItem" :key="item" :value="item" class="item">
+            <v-btn 
+            style="height: 36px !important;padding: 8px 16px;" 
+            @click="toggle(item)" 
+            :class="setting === item ? 'active' : ''">
+              {{ item }}
+            </v-btn>
+          </div>
+        </v-item-group>
+        <!-- //tabs -->
+        <div class="pop-contents" v-if="setting === '구독중'" style="padding: 0;">
+          <!-- v-container -->
+          <v-container fluid class="board_panel">
+            <v-row no-gutters>
+              <!-- table -->
+              <v-table fixed-header height="480" class="overflow-y-auto no-border">
+              <colgroup>
+                <col style="width: 100px;"/>
+                <col />
+                <col style="width: 100px;"/>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td><span class="text-secondary point">추천</span></td>
+                  <td><div>추천 구독은 상단에 [추천] 아이콘으로 표시됩니다.<span class="new">N</span></div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-secondary point">중요</span></td>
+                  <td><div>중요 구독은 상단에 [중요] 아이콘으로 표시됩니다.<span class="new">N</span></div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[신규]</span></td>
+                  <td><div>신규 구독 내용이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span>[구독]</span></td>
+                  <td><div>추천 구독일 경우 [추천]아이콘이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+                <tr>
+                  <td><span class="text-primary">[채널명]</span></td>
+                  <td><div>채널명인 게시글이 표시됩니다.</div></td>
+                  <td class="right"><span class="gray">12/24/10:36</span></td>
+                </tr>
+              </tbody>
+              </v-table>
+              <!--// table -->
+            </v-row>
+          </v-container>
+          <!--// v-container -->
         </div>
-        <!-- table -->
-        <v-table fixed-header height="447" class="overflow-y-auto text-center dense-dark mt-2">
-          <colgroup>
-            <col />
-            <col />
-          </colgroup>
-          <thead>
-            <tr>
-              <th>선택</th>
-              <th>객실이름</th>
-              <th>GID</th>
-              <th>LID</th>
-              <th>객실타입</th>
-              <th>층수</th>
-              <th>방수</th>
-              <th>바코드</th>
-              <th>도어락 ID</th>
-              <th>예약가능</th>
-              <th>무인 숙박판매</th>
-              <th>무인 대실판매</th>
-              <th>무인 예약판매</th>
-              <th>삭제</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
-              </td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="불가" :model-value="true" disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-btn density="compact" size="small" icon="mdi-trash-can-outline"></v-btn>
-              </td>
-            </tr>
-            <tr v-for="item in 20" :key="item">
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
-              </td>
-              <td>201호</td>
-              <td>1</td>
-              <td>1</td>
-              <td>스위트룸</td>
-              <td>2층</td>
-              <td>1</td>
-              <td>1</td>
-              <td>D0EFF01</td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="가능"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-btn density="compact" size="small" icon="mdi-trash-can-outline"></v-btn>
-              </td>
-            </tr>
-          </tbody>
-        </v-table>
+        <div class="pop-contents" v-if="setting === '신규 및 추천'" style="padding: 0;">
+          <!-- v-container -->
+          <v-container fluid class="board_panel" style="max-height: 512px;overflow-y: scroll;">
+            <v-row no-gutters>
+              <!-- d-flex -->
+              <div class="d-flex justify-space-between mb-3" style="width: 100%;">
+                <v-sheet class="subscribe-card">
+                  <div class="title-area mb-2">
+                    <h3 class="title">제목이 표시됩니다.</h3>
+                    <div class="btn-area">
+                      <span class="sub-title mr-2">구독 채널명</span>
+                      <v-btn class="btn" color="secondary" size="small" >+ 구독</v-btn>
+                    </div>
+                  </div>
+                  <div class="img-area">
+                    이미지 및 상세내용<br>(가격안내)
+                  </div>
+                </v-sheet>
+                <v-sheet class="subscribe-card mb-3">
+                  <div class="title-area mb-2">
+                    <h3 class="title">제목이 표시됩니다.</h3>
+                    <div class="btn-area">
+                      <span class="sub-title mr-2">구독 채널명</span>
+                      <v-btn class="btn" color="secondary" size="small" >+ 구독</v-btn>
+                    </div>
+                  </div>
+                  <div class="img-area">
+                    이미지 및 상세내용<br>(가격안내)
+                  </div>
+                </v-sheet>
+              </div>
+              <!--// d-flex -->
+            </v-row>
+            <v-row no-gutters>
+              <!-- d-flex -->
+              <div class="d-flex justify-space-between mb-3" style="width: 100%;">
+                <v-sheet class="subscribe-card">
+                  <div class="title-area mb-2">
+                    <h3 class="title">제목이 표시됩니다.</h3>
+                    <div class="btn-area">
+                      <span class="sub-title mr-2">구독 채널명</span>
+                      <v-btn class="btn" color="secondary" size="small" >+ 구독</v-btn>
+                    </div>
+                  </div>
+                  <div class="img-area">
+                    이미지 및 상세내용<br>(가격안내)
+                  </div>
+                </v-sheet>
+                <v-sheet class="subscribe-card mb-3">
+                  <div class="title-area mb-2">
+                    <h3 class="title">제목이 표시됩니다.</h3>
+                    <div class="btn-area">
+                      <span class="sub-title mr-2">구독 채널명</span>
+                      <v-btn class="btn" color="secondary" size="small" >+ 구독</v-btn>
+                    </div>
+                  </div>
+                  <div class="img-area">
+                    이미지 및 상세내용<br>(가격안내)
+                  </div>
+                </v-sheet>
+              </div>
+              <!--// d-flex -->
+            </v-row>
+
+          </v-container>
+          <!--// v-container -->
+        </div>
+        <!-- pagination -->
+        <div class="text-center page-navigation">
+            <v-pagination v-model="page" :length="5" rounded="circle"></v-pagination>
+          </div>
+          <!-- /pagination -->
         <!-- //table -->
-        <!-- field-set -->
-        <fieldset class="field-set mt-3">
-          <v-table>
-            <colgroup>
-              <col style="width: 110px" />
-              <col style="width: *"/>
-              <col style="width: 130px" />
-              <col style="width: 220px" />
-              <col style="width: 110px" />
-              <col style="width: 220px" />
-            </colgroup>
-            <tbody>
-              <tr>
-                <th class="text-center">선택한 객실을</th>
-                <td>
-                  <div class="d-flex align-center">
-                    <v-select 
-                      :items="['선택', '스위트룸', 'VIP룸', '일반룸']"
-                      value="선택"
-                      density="compact"
-                      hide-details
-                      variant="outlined">
-                    </v-select>
-                    <span class="ml-2">타입으로 변경</span>
-                  </div>
-                </td>
-                <th class="text-center">선택한 객실 GID를</th>
-                <td>
-                  <input type="text" class="input" style="width: 100px;" />
-                  <span class="ml-2">으로</span>
-                  <v-btn color="grey" class="ml-2" size="small" style="min-width: 60px">변경</v-btn>
-                </td>
-                <th class="text-center">선택한 객실을</th>
-                <td>
-                  <div class="d-flex align-center">
-                    <v-select
-                      :items="['스위트룸', 'VIP룸', '일반룸']"
-                      value="스위트룸"
-                      density="compact"
-                      hide-details
-                      variant="outlined">
-                    </v-select>
-                    <v-btn color="grey" class="ml-2" size="small" style="min-width: 60px">적용</v-btn>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </v-table>
-        </fieldset>
-        <!-- //field-set -->
       </div>
       <!-- //popup-contents -->
     </template>
     <!-- //slot -->
+    <template v-slot:footer>
+      <div class="btns">
+            <v-btn color="darkgrey" size="large" style="min-width: 150px">닫기</v-btn>
+      </div>
+    </template>
   </Popup>
-  <!-- //popup -->
-
-  <!-- popup -->
-  <v-dialog v-model="dialog" width="auto">
-    <!-- popup -->
-    <Popup :popup="popupAlert">
-      <!-- slot -->
-      <template v-slot:body>
-        <!-- popup-contents -->
-        <div class="popup-contents">
-          <div class="box-border d-flex flex-column align-center justify-center px-8" style="height: 140px;">
-            <div class="mb-5">
-              <v-icon color="secondary" class="mr-2">mdi-alert-circle</v-icon>
-              <span>추가할 객실명을 입력하세요</span>
-            </div>
-            <input type="text" class="input md" />
-          </div>
-        </div>
-        <!-- //popup-contents -->
-      </template>
-      <!-- //slot -->
-      <!-- slot -->
-      <template v-slot:footer>
-        <div class="btns">
-          <v-btn color="primary" size="large" style="min-width: 150px">추가</v-btn>
-          <v-btn color="darkgrey" size="large" style="min-width: 150px" @click="dialog = !dialog">취소</v-btn>
-        </div>
-      </template>
-      <!-- //slot -->
-    </Popup>
-    <!-- //popup -->
-    
-  </v-dialog>
   <!-- //popup -->
 </template>
 
 <script>
 import Popup from "@/components/popup/popup.vue";
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
 
 export default {
-  name: "RoomInfo",
+  name: "notice_news",
   components: {
-    Popup,
+    Popup, VueDatePicker
   },
   data: () => ({
     popup: {
-      title: "객실정보 관리",
-      theme: "theme-popup-dark",
-      size: "size-lg",
+      title: "구독현황",
+      theme: "theme-popup-light",
+      size: "size-smd",
       align: "mx-auto",
     },
-    popupAlert: {
-      title: "객실추가",
-      theme: "theme-popup-light",
-      size: "size-sm",
-      align: "ml-3 mr-auto",
-    },
-    dialog: false,
+    date: null,
+    page: 1,
+    setting: "구독중",
+    tabsItem: [
+        "구독중",
+        "신규 및 추천",
+    ],
+    model: true,
   }),
+  methods: {
+    toggle(val) {
+      this.setting = val;
+    },
+  },
 };
 </script>
