@@ -160,7 +160,7 @@
           </v-table>
         </div>
         <!-- pagination -->
-        <div class="text-center navigation">
+        <div class="text-center page-navigation">
             <v-pagination v-model="page" :length="4" rounded="circle"></v-pagination>
         </div>
         <!-- /pagination -->

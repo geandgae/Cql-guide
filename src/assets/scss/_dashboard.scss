@@ -195,12 +195,13 @@
         table {
             th,
             td {
-              height: auto !important;
+              height: 32px !important;
             }
 
         }
     }
     &.no-border{
+        width: 100%;
         table{
             border: 0;
         }
@@ -212,6 +213,7 @@
             }
         }
         td {
+            vertical-align: baseline;
             &.right{
                 text-align: right;
             }
@@ -226,6 +228,12 @@
                     color: #aaa;
                     padding-right: 10px;
                 }
+                &.point{
+                    border-radius: 16px;
+                    padding: 1px 7px 3px;
+                    color: #fc6060;
+                    border: 1px solid #fc6060;
+                }
             
             }
             > div{
@@ -239,6 +247,9 @@
                     border-radius: 2px;
                     margin-left: 10px;
                 }
+            }
+            > div + div{
+                margin-top: 5px;
             }
         }
         tbody {
@@ -316,6 +327,7 @@
     }
 }
 .page-navigation{
+    margin-top: 12px;
     .v-btn--icon{
         .v-btn--density-default {
             width: calc(var(--v-btn-height) + -2px) !important;
@@ -334,7 +346,7 @@
     .v-btn__overlay, .v-btn__underlay{
         width: 20px !important;
         height: 20px !important;
-        top: 14px !important;
+        top: 7px !important;
         left: 0px !important;
         border-radius: 0 !important;
         

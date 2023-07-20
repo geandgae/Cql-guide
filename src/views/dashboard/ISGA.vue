@@ -225,7 +225,7 @@
                     <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
@@ -247,7 +247,7 @@
                     <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
@@ -269,7 +269,7 @@
                     <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
@@ -506,7 +506,7 @@
                     <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
@@ -528,7 +528,7 @@
                     <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
@@ -550,7 +550,7 @@
                     <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
@@ -786,7 +786,7 @@
                     <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
@@ -808,7 +808,7 @@
                     <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
@@ -830,7 +830,7 @@
                     <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
-                        <col />
+                        <col style="width: 120px"/>
                         <col style="width: 90px" />
                         <col />
                       </colgroup>
