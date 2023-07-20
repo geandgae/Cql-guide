@@ -164,3 +164,15 @@
         }
     }
 }
+
+.v-table {
+    &.sm{
+        table {
+            th,
+            td {
+              height: 32px !important;
+            }
+
+        }
+    }
+}

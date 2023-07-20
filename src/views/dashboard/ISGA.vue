@@ -115,7 +115,7 @@
                 </fieldset>
                 <!-- //field-set -->
                 <!-- table -->
-                <v-table fixed-header height="562" class="overflow-y-auto text-center dense-dark">
+                <v-table fixed-header height="492" class="overflow-y-auto text-center dense-dark">
                   <colgroup>
                     <col />
                     <col />
@@ -187,7 +187,7 @@
                     <div class="field-title-area">
                       <h3 class="field-title2 mb-2">카드데크</h3>
                     </div>
-                    <v-table>
+                    <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col style="width: 120px"/>
@@ -222,7 +222,7 @@
                     <div class="field-title-area">
                       <h3 class="field-title2 mb-2">객실상세</h3>
                     </div>
-                    <v-table>
+                    <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -244,7 +244,7 @@
                         </tr>
                       </tbody>
                     </v-table>
-                    <v-table class="mt-2">
+                    <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -266,7 +266,7 @@
                         </tr>
                       </tbody>
                     </v-table>
-                    <v-table class="mt-2">
+                    <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -396,7 +396,7 @@
                 </fieldset>
                 <!-- //field-set -->
                 <!-- table -->
-                <v-table fixed-header height="562" class="overflow-y-auto text-center dense-dark">
+                <v-table fixed-header height="492" class="overflow-y-auto text-center dense-dark">
                   <colgroup>
                     <col />
                     <col />
@@ -468,7 +468,7 @@
                     <div class="field-title-area">
                       <h3 class="field-title2 mb-2">카드데크</h3>
                     </div>
-                    <v-table>
+                    <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col style="width: 120px"/>
@@ -503,7 +503,7 @@
                     <div class="field-title-area">
                       <h3 class="field-title2 mb-2">객실상세</h3>
                     </div>
-                    <v-table>
+                    <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -525,7 +525,7 @@
                         </tr>
                       </tbody>
                     </v-table>
-                    <v-table class="mt-2">
+                    <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -547,7 +547,7 @@
                         </tr>
                       </tbody>
                     </v-table>
-                    <v-table class="mt-2">
+                    <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -575,7 +575,7 @@
             </div>
           </v-row>
         </v-container>
-        <!--// v-container -->
+         <!--// v-container -->
       </div>
       <div class="pop-contents" v-if="setting === '무인판매3'">
         <!-- v-container -->
@@ -676,7 +676,7 @@
                 </fieldset>
                 <!-- //field-set -->
                 <!-- table -->
-                <v-table fixed-header height="562" class="overflow-y-auto text-center dense-dark">
+                <v-table fixed-header height="492" class="overflow-y-auto text-center dense-dark">
                   <colgroup>
                     <col />
                     <col />
@@ -748,7 +748,7 @@
                     <div class="field-title-area">
                       <h3 class="field-title2 mb-2">카드데크</h3>
                     </div>
-                    <v-table>
+                    <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col style="width: 120px"/>
@@ -783,7 +783,7 @@
                     <div class="field-title-area">
                       <h3 class="field-title2 mb-2">객실상세</h3>
                     </div>
-                    <v-table>
+                    <v-table class="sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -805,7 +805,7 @@
                         </tr>
                       </tbody>
                     </v-table>
-                    <v-table class="mt-2">
+                    <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -827,7 +827,7 @@
                         </tr>
                       </tbody>
                     </v-table>
-                    <v-table class="mt-2">
+                    <v-table class="mt-2 sm">
                       <colgroup>
                         <col style="width: 90px" />
                         <col />
@@ -855,7 +855,7 @@
             </div>
           </v-row>
         </v-container>
-        <!--// v-container -->
+         <!--// v-container -->
       </div>
       <!-- //popup-contents -->
     </template>
@@ -896,8 +896,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-    
-
-</style>
