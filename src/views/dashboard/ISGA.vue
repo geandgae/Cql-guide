@@ -4,7 +4,7 @@
     <!-- slot -->
     <template v-slot:body>
       <!-- tabs -->
-      <v-item-group v-model="setting" class="board_tabs">
+      <v-item-group v-model="setting" class="board_tabs three">
         <div v-for="item in tabsItem" :key="item" :value="item" class="item">
           <v-btn 
           style="height: 36px !important;padding: 8px 16px;" 
@@ -859,6 +859,11 @@
       </div>
       <!-- //popup-contents -->
     </template>
+    <template v-slot:footer>
+      <div class="btns">
+            <v-btn color="darkgrey" size="large" style="min-width: 150px">닫기</v-btn>
+      </div>
+    </template>
     <!-- //slot -->
   </Popup>
   <!-- //popup -->
@@ -868,7 +873,7 @@
 import Popup from "@/components/popup/popup.vue";
 
 export default {
-  name: "settingEnv",
+  name: "ISGA",
   components: {
     Popup,
   },

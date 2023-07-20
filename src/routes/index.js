@@ -68,14 +68,14 @@ export default createRouter ({
       component: () => import("@/views//dashboard/hotel_news_view")
     },
     { //06.공지사항_목록 
-      path: '/dashboard/notice',
-      name: 'notice',
-      component: () => import("@/views//dashboard/notice")
+      path: '/dashboard/notice_news',
+      name: 'notice_news',
+      component: () => import("@/views//dashboard/notice_news")
     },
     { //07.공지사항_보기 
-      path: '/dashboard/notice_view',
-      name: 'notice_view',
-      component: () => import("@/views//dashboard/notice_view")
+      path: '/dashboard/notice_news_view',
+      name: 'notice_news_view',
+      component: () => import("@/views//dashboard/notice_news_view")
     },
     { //08.구독현황_목록 
       path: '/dashboard/subscribe_status',
