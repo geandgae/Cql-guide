@@ -104,13 +104,21 @@
     </tbody>
   </v-table>
   <!-- //table -->
+
+  <!-- pagination -->
+  <div class="text-center">
+    <v-pagination v-model="page" :length="4" rounded="circle"></v-pagination>
+  </div>
+  <!-- /pagination -->
 </template>
 
 <script>
 export default {
   name: "GuideTable",
   data() {
-    return {};
+    return {
+      page: 1,
+    };
   },
 };
 </script>

@@ -21,8 +21,8 @@
     </div>
   </fieldset>
 
-  <div class="d-flex align-center" style="gap: 10px">
-    <fieldset class="field-set mt-4">
+  <fieldset class="field-set d-flex w-100" style="gap: 8px">
+    <div class="field-inner">
       <h3 class="field-title mb-2">차량호출 기능</h3>
       <div class="field-box">
         <v-radio-group hide-details density="compact" inline>
@@ -30,8 +30,8 @@
           <v-radio class="ml-2" color="secondary" label="사용 안함" value="사용 안함"></v-radio>
         </v-radio-group>
       </div>
-    </fieldset>
-    <fieldset class="field-set mt-4">
+    </div>
+    <div class="field-inner">
       <h3 class="field-title mb-2">비상호출 기능</h3>
       <div class="field-box">
         <v-radio-group hide-details density="compact" inline>
@@ -39,8 +39,8 @@
           <v-radio class="ml-2" color="secondary" label="사용 안함" value="사용 안함"></v-radio>
         </v-radio-group>
       </div>
-    </fieldset>
-    <fieldset class="field-set mt-4">
+    </div>
+    <div class="field-inner">
       <h3 class="field-title mb-2">입실 취소 사유 입력 팝업</h3>
       <div class="field-box">
         <v-radio-group hide-details density="compact" inline>
@@ -48,10 +48,10 @@
           <v-radio class="ml-2" color="secondary" label="사용 안함" value="사용 안함"></v-radio>
         </v-radio-group>
       </div>
-    </fieldset>
-  </div>
+    </div>
+  </fieldset>
 
-  <fieldset class="field-set mt-4">
+  <fieldset class="field-set">
     <h3 class="field-title mb-2">재 호출 지연 시간</h3>
     <div class="field-box">
       <div class="d-flex align-center">

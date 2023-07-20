@@ -15,6 +15,7 @@
   <div class="title-sub">필터옵션</div>
   <v-spacer class="my-5"></v-spacer>
   <div class="body-1">body-1 본문 14px</div>
+  <div class="body-2">body-2 본문 12px</div>
   <v-spacer class="my-5"></v-spacer>
   <div class="bbs-title d-flex align-center">
     <span class="text">'야놀자 라이브' 조회수 10만 돌파</span>
