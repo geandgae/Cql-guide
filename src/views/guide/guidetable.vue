@@ -106,8 +106,12 @@
   <!-- //table -->
 
   <!-- pagination -->
-  <div class="text-center">
-    <v-pagination v-model="page" :length="4" rounded="circle"></v-pagination>
+  <div class="text-center mt-3">
+    <v-pagination
+      v-model="page"
+      :length="15"
+      :total-visible="7"
+    ></v-pagination>
   </div>
   <!-- /pagination -->
 </template>
