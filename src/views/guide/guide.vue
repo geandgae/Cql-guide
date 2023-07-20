@@ -26,7 +26,7 @@
 
     <!-- font -->
     <div v-if="tab === 'font'" class="py-10">
-      <Font></Font>
+      <Fontg></Fontg>
     </div>
 
     <!-- icon -->
@@ -46,12 +46,17 @@
 
     <!-- table -->
     <div v-if="tab === 'table'" class="py-10">
-      <gTable></gTable>
+      <Gtable></Gtable>
     </div>
 
     <!-- chart -->
     <div v-if="tab === 'chart'" class="py-10">
       <Chart></Chart>
+    </div>
+
+    <!-- chart -->
+    <div v-if="tab === 'datepicker'" class="py-10">
+      <Datepicker></Datepicker>
     </div>
   </v-container>
 </template>
@@ -61,11 +66,12 @@ import Grid from "./grid.vue";
 import Buttons from "./buttons.vue";
 import Gpopup from "./gpopup.vue";
 import Form from "./form.vue";
-import Font from "./font.vue";
+import Fontg from "./font.vue";
 import Chart from "./gchart.vue";
 import Icon from "./icon.vue";
 import Color from "./color.vue";
-import gTable from "./guidetable.vue";
+import Gtable from "./guidetable.vue";
+import Datepicker from "./datepicker_guide.vue";
 
 export default {
   name: "guideList",
@@ -74,11 +80,12 @@ export default {
     Buttons,
     Gpopup,
     Form,
-    Font,
+    Fontg,
     Chart,
     Icon,
     Color,
-    gTable,
+    Gtable,
+    Datepicker,
   },
   data() {
     return {
@@ -94,6 +101,7 @@ export default {
         'form', 
         'table', 
         'chart',
+        'datepicker',
       ]
     };
   },

@@ -1,5 +1,15 @@
 <template>
   <!-- popup -->
+  <Popup :popup="popup7" style="width: 800px; height: 300px;">
+    <!-- slot -->
+    <template v-slot:body> slot </template>
+    <!-- //slot -->
+  </Popup>
+  <!-- //popup -->
+
+  <v-spacer class="my-5"></v-spacer>
+
+  <!-- popup -->
   <Popup :popup="popup">
     <!-- slot -->
     <template v-slot:body> slot </template>
@@ -75,24 +85,28 @@ export default {
         theme: "theme-popup-dark",
         size: "size-sm",
         align: "mx-auto",
+        pin: false,
       },
       popup2: {
         title: "theme-popup-light / size-sm",
         theme: "theme-popup-light",
         size: "size-sm",
         align: "mx-auto",
+        pin: true,
       },
       popup3: {
         title: "theme-popup-dark / size-md",
         theme: "theme-popup-dark",
         size: "size-md",
         align: "mx-auto",
+        pin: true,
       },
       popup4: {
         title: "theme-popup-light / size-md",
         theme: "theme-popup-light",
         size: "size-md",
         align: "mx-auto",
+        pin: true,
       },
       popup5: {
         title: "theme-popup-dark / size-lg",
@@ -105,6 +119,13 @@ export default {
         theme: "theme-popup-dark",
         size: "size-xlg",
         align: "mx-auto",
+      },
+      popup7: {
+        title: "theme-popup-dark / size-auto",
+        theme: "theme-popup-dark",
+        size: "size-auto",
+        align: "mx-auto",
+        pin: true,
       },
     };
   },
