@@ -180,8 +180,8 @@ export default {
           url: {
             to: '/dashboard/hotel_news_view',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -204,8 +204,8 @@ export default {
           url: {
             to: '/dashboard/notice_news_view',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -240,8 +240,8 @@ export default {
           url: {
             to: '/dashboard/subscribe_status_view',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
 
         
