@@ -455,7 +455,7 @@ export default {
         },
         {
           type: '',
-          name: '29.업소 게시판-알림목록',
+          name: '30.업소 게시판-알림목록',
           depth1: 'room',
           depth2: 'board_alarm',
           depth3: '-',
@@ -467,7 +467,7 @@ export default {
         },
         {
           type: '',
-          name: '30.업소 게시판-알림등록',
+          name: '31.업소 게시판-알림등록',
           depth1: 'room',
           depth2: 'board_alarm_write',
           depth3: '-',
@@ -479,7 +479,7 @@ export default {
         },
         {
           type: '',
-          name: '31.A/S 건의사항-건의목록',
+          name: '32.A/S 건의사항-건의목록',
           depth1: 'room',
           depth2: 'board_as',
           depth3: '-',
@@ -491,7 +491,7 @@ export default {
         },
         {
           type: '',
-          name: '32.A/S 건의사항-건의등록',
+          name: '33.A/S 건의사항-건의등록',
           depth1: 'room',
           depth2: 'board_as_write',
           depth3: '-',
