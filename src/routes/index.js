@@ -47,6 +47,7 @@ export default createRouter ({
       component: () => import("@/views/test/env")
     },
     // 2023-07-18: 백인환 추가
+    // 대시보드
     { //02. 예약현황
       path: '/dashboard/registration_status',
       name: 'registration_status',
@@ -91,6 +92,28 @@ export default createRouter ({
       path: '/dashboard/subscribe_status_view',
       name: 'subscribe_status_view',
       component: () => import("@/views//dashboard/subscribe_status_view")
+    },
+
+    //객실관리
+    { //30.업소 게시판-알림목록
+      path: '/room/board_alarm',
+      name: 'board_alarm',
+      component: () => import("@/views//room/board_alarm")
+    },
+    { //31.업소 게시판-알림등록
+      path: '/room/board_alarm_write',
+      name: 'board_alarm_write',
+      component: () => import("@/views//room/board_alarm_write")
+    },
+    { //32.A/S 건의사항-건의목록
+      path: '/room/board_as',
+      name: 'board_as',
+      component: () => import("@/views//room/board_as")
+    },
+    { //33.A/S 건의사항-건의등록
+      path: '/room/board_as_write',
+      name: 'board_as_write',
+      component: () => import("@/views//room/board_as_write")
     },
   ]
 })
