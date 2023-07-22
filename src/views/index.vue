@@ -254,8 +254,8 @@ export default {
           url: {
             to: '/room/room_in',
           },
-          status: '대기',
-          memo: '',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
