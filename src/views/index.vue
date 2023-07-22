@@ -462,8 +462,8 @@ export default {
           url: {
             to: '/room/board_alarm',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -474,8 +474,8 @@ export default {
           url: {
             to: '/room/board_alarm_write',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -486,8 +486,8 @@ export default {
           url: {
             to: '/room/board_as',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         {
           type: '',
@@ -498,8 +498,8 @@ export default {
           url: {
             to: '/room/board_as_write',
           },
-          status: '대기',
-          memo: '-',
+          status: '완료',
+          memo: '백인환:07-21',
         },
         
         {
