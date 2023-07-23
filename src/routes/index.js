@@ -131,9 +131,9 @@ export default createRouter ({
       component: () => import("@/views/room/room_setting")
     },
     { //19.시뮬레이터
-      path: '/room/simulator',
-      name: 'simulator',
-      component: () => import("@/views/room/simulator")
+      path: '/room/ccu_simulator',
+      name: 'ccu_simulator',
+      component: () => import("@/views/room/ccu_simulator")
     },
     { //20.객실판매현황
       path: '/room/sales_status',

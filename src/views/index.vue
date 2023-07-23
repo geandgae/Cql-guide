@@ -326,19 +326,19 @@ export default {
           url: {
             to: '/room/room_setting',
           },
-          status: '대기',
+          status: '완료',
           memo: '',
         },
         {
           type: '',
           name: '19.시뮬레이터',
           depth1: 'room',
-          depth2: 'simulator',
+          depth2: 'ccu_simulator',
           depth3: '-',
           url: {
-            to: '/room/simulator',
+            to: '/room/ccu_simulator',
           },
-          status: '대기',
+          status: '완료',
           memo: '',
         },
         {
