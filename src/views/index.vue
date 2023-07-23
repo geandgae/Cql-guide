@@ -372,10 +372,10 @@ export default {
           type: '-',
           name: '24.객실정보 관리',
           depth1: 'management',
-          depth2: 'roominfo',
+          depth2: 'room_info',
           depth3: '-',
           url: {
-            to: '/management/roominfo',
+            to: '/management/room_info',
           },
           status: '완료',
           memo: '-',
@@ -390,7 +390,7 @@ export default {
           url: {
             to: '/room/room_type',
           },
-          status: '대기',
+          status: '완료',
           memo: '-',
         },
         {
@@ -402,7 +402,7 @@ export default {
           url: {
             to: '/room/room_status',
           },
-          status: '대기',
+          status: '진행중',
           memo: '-',
         },
         {
@@ -414,7 +414,7 @@ export default {
           url: {
             to: '/room/point_management',
           },
-          status: '대기',
+          status: '완료',
           memo: '-',
         },
         {
@@ -426,7 +426,7 @@ export default {
           url: {
             to: '/room/room_management',
           },
-          status: '대기',
+          status: '진행중',
           memo: '-',
         },
         {
@@ -438,7 +438,7 @@ export default {
           url: {
             to: '/room/room_registration',
           },
-          status: '대기',
+          status: '진행중',
           memo: '-',
         },
         {

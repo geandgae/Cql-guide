@@ -71,6 +71,7 @@ hr {
   vertical-align: middle;
   &:focus {
     outline: none;
+    border-color: #3c4d60;
   }
   &.sm {
     height: 22px;
@@ -91,6 +92,7 @@ hr {
   resize: none;
   &:focus {
     outline: none;
+    border-color: #3c4d60;
   }
 }
 
@@ -134,6 +136,14 @@ hr {
     &:focus {
       outline: none;
     }
+  }
+  &.sm {
+    height: 22px !important;
+  }
+}
+.v-table.dense-dark {
+  .input-counter.sm {
+    height: 22px !important;
   }
 }
 
