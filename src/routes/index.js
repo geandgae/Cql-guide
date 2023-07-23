@@ -30,6 +30,11 @@ export default createRouter ({
       name: 'setting',
       component: () => import("@/views/setting/index")
     },
+    {
+      path: '/setting/key_status',
+      name: 'settingkey',
+      component: () => import("@/views/setting/key_status")
+    },
     // test
     {
       path: '/test/popup',

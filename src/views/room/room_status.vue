@@ -111,7 +111,7 @@
                   <td>
                     <div class="d-inline-flex align-center">
                       <div class="mr-1">고객키</div>
-                      <v-icon color="dark-grey" style="font-weight: bolder;">mdi-circle-outline</v-icon>
+                      <v-icon color="dark-grey">mdi-circle-outline</v-icon>
                     </div>
                   </td>
                   <td>문 <span class="color-secondary">[열림]</span></td>

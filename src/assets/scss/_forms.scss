@@ -259,3 +259,14 @@ hr {
     color: #2c2f35 !important;
   }
 }
+
+.title-baener {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}

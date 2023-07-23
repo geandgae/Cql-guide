@@ -487,7 +487,7 @@ export default {
           url: {
             to: '/setting/',
           },
-          status: '진행중',
+          status: '완료',
           memo: '-',
         },
         {
@@ -499,7 +499,7 @@ export default {
           url: {
             to: '/setting/key_status',
           },
-          status: '대기',
+          status: '완료',
           memo: '-',
         },
       ],
