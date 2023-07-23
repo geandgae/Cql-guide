@@ -15,7 +15,7 @@
             <v-radio-group hide-details density="compact" inline>
               <v-radio color="secondary" label="어제" value="어제"></v-radio>
               <v-radio color="secondary" label="오늘" value="오늘" class="ml-2"></v-radio>
-              <v-radio color="secondary" label="이번주" value="일반실" class="ml-2"></v-radio>
+              <v-radio color="secondary" label="이번주" value="이번주" class="ml-2"></v-radio>
             </v-radio-group>
             <div class="d-flex align-center ml-4">
               <VueDatePicker v-model="date" style="width:150px;border-radius: 0;" class="div-daypicker"></VueDatePicker>

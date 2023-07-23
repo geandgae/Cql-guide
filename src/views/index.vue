@@ -354,7 +354,6 @@ export default {
           memo: '',
         },
 
-        
         {
           type: '',
           name: '23.포인트이력조회',
@@ -364,7 +363,7 @@ export default {
           url: {
             to: '/room/point_list',
           },
-          status: '대기',
+          status: '완료',
           memo: '-',
         },
         
