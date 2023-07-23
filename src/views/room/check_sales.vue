@@ -1,249 +1,338 @@
 <template>
   <!-- popup -->
-  <Popup :popup="popup">
+  <Popup :popup="popup" style="width: 1040px;">
     <!-- slot -->
     <template v-slot:body>
       <!-- popup-contents -->
       <div class="popup-contents">
         <!-- field-set -->
         <fieldset class="field-set">
-          <h3 class="title-sub mb-4">객실정보 변경</h3>
-          <v-table>
-            <colgroup>
-              <col style="width: 110px" />
-              <col />
-              <col style="width: 110px" />
-              <col />
-            </colgroup>
-            <tbody>
-              <tr>
-                <th class="text-center">객실타입 선택</th>
-                <td>
-                  <v-radio-group hide-details density="compact" inline>
-                    <v-radio color="secondary" label="VIP룸" value="VIP룸"></v-radio>
-                    <v-radio color="secondary" label="스위트룸" value="스위트룸" class="ml-4"></v-radio>
-                    <v-radio color="secondary" label="일반실" value="일반실" class="ml-4"></v-radio>
-                    <v-radio color="secondary" label="없음" value="없음" class="ml-4"></v-radio>
-                  </v-radio-group>
-                </td>
-                <th class="text-center">검색</th>
-                <td>
-                  <div class="input-search">
-                    <input type="text" />
-                    <v-btn density="compact" size="small" icon="mdi-magnify"></v-btn>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </v-table>
+          <div class="d-flex justify-space-between">
+            <h3 class="title-sub">조회일자</h3>
+            <div class="text-secondary bullet-text">객실이력 보관 일수는 12일 입니다.</div>
+          </div>
+          <div class="field-box mt-3">
+            <v-radio-group hide-details density="compact" inline>
+              <v-radio color="secondary" label="어제" value="어제"></v-radio>
+              <v-radio color="secondary" label="오늘" value="오늘" class="ml-2"></v-radio>
+              <v-radio color="secondary" label="이번주" value="일반실" class="ml-2"></v-radio>
+            </v-radio-group>
+            <div class="d-flex align-center ml-4">
+              <VueDatePicker v-model="date" style="width:150px;border-radius: 0;" class="div-daypicker"></VueDatePicker>
+              <div class="input-counter ml-2" style="width: 88px;">
+                <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                  <v-icon size="small" color="white">mdi-chevron-down</v-icon>
+                </v-btn>
+                <input type="text" value="10시"/>
+                <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                  <v-icon size="small" color="white">mdi-chevron-up</v-icon>
+                </v-btn>
+              </div>
+              <div class="input-counter ml-2" style="width: 88px;">
+                <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                  <v-icon size="small" color="white">mdi-chevron-down</v-icon>
+                </v-btn>
+                <input type="text" value="0분"/>
+                <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                  <v-icon size="small" color="white">mdi-chevron-up</v-icon>
+                </v-btn>
+              </div>
+              <span class="ml-2 mr-2"> - </span>
+              <VueDatePicker v-model="date" style="width:150px;border-radius: 0;" class="div-daypicker"></VueDatePicker>
+              <div class="input-counter ml-2" style="width: 88px;">
+                <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                  <v-icon size="small" color="white">mdi-chevron-down</v-icon>
+                </v-btn>
+                <input type="text" value="10시"/>
+                <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                  <v-icon size="small" color="white">mdi-chevron-up</v-icon>
+                </v-btn>
+              </div>
+              <div class="input-counter ml-2" style="width: 88px;">
+                <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                  <v-icon size="small" color="white">mdi-chevron-down</v-icon>
+                </v-btn>
+                <input type="text" value="0분"/>
+                <v-btn color="darkgrey" style="min-width: auto; width: 16px; height: 16px" class="pa-0">
+                  <v-icon size="small" color="white">mdi-chevron-up</v-icon>
+                </v-btn>
+              </div>
+            </div>
+            <v-btn color="secondary" size="small"  variant="outlined" class="ml-2" style="max-width:66px">
+                검색조회
+            </v-btn>
+          </div>
         </fieldset>
         <!-- //field-set -->
-        <div class="d-flex align-center mt-3">
-          <v-checkbox hide-details density="compact" color="secondary" label="전체선택" class="flex-grow-0"></v-checkbox>
-          <v-btn color="white" class="custom-btn-icon-white ml-auto" prepend-icon="mdi-plus-thick" size="small" style="min-width: 80px" @click="dialog = !dialog">
-            <template v-slot:prepend>
-              <v-icon size="small" color="pa-0 ma-0"></v-icon>
-            </template>
-            객실추가
-          </v-btn>
+        <!-- field-set -->
+        <fieldset class="field-set">
+          <div class="d-flex justify-space-between">
+            <h3 class="title-sub pt-1">필터옵션</h3>
+            <div class="d-flex align-center">
+              <v-checkbox hide-details density="compact" color="secondary" label="전체선택" class=""></v-checkbox>
+              <span class="ml-2 mr-2"> | </span>
+              <span class="mr-2">객실명</span>
+              <v-select 
+                :items="['객실미배정', '객실배정', '객실대기']" 
+                value="전체객실" 
+                density="compact" 
+                hide-details
+                style="width:250px !important;background-color: #fff;">
+              </v-select>
+            </div>
+          </div>
+          <div class="field-check-group mt-2">
+            <div class="check-group">
+              <v-checkbox hide-details density="compact" color="secondary" label="손님키"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="손님키"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="출입문"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="대실"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="숙박"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="장기"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="퇴실"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="외출"></v-checkbox>
+            </div>
+            <div class="check-group">
+              <v-checkbox hide-details density="compact" color="secondary" label="객실이동"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="청소요청"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="청소완료"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="외출복귀"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="입실취소"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="퇴실취소"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="전원차단"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="전원공급"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="배차요청"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="배차완료"></v-checkbox>
+              <v-checkbox hide-details density="compact" color="secondary" label="배차취소"></v-checkbox>
+            </div>
+          </div>
+        </fieldset>
+        <!--// field-set -->
+        <div class="d-flex justify-space-between align-center mt-3">
+          <p>total: <span class="text-secondary">46</span>개</p>
+          <div class="d-flex align-center">
+            <v-select 
+                :items="['10개씩 보기', '20개씩 보기', '30개씩 보기']" 
+                value="10개씩 보기" 
+                density="compact" 
+                hide-details
+                class="mr-2"
+                style="width:110px !important;background-color: #fff;">
+              </v-select>
+            <v-btn color="white" class="custom-btn-icon-white ml-auto" prepend-icon="mdi-close-box" size="small" style="min-width: 80px" @click="dialog = !dialog">
+              <template v-slot:prepend>
+                <v-icon size="medium" color="" style="color: #0e6d10;"></v-icon>
+              </template>
+              엑셀저장
+            </v-btn>
+          </div>
         </div>
         <!-- table -->
         <v-table fixed-header height="447" class="overflow-y-auto text-center dense-dark mt-2">
           <colgroup>
-            <col />
-            <col />
+            <col style="width: 180px;"/>
+            <col style="width: 120px;"/>
+            <col style="width: 120px;"/>
+            <col style="width: 120px;"/>
+            <col style="width: 120px;"/>
+            <col style="width: *"/>
           </colgroup>
           <thead>
             <tr>
-              <th>선택</th>
-              <th>객실이름</th>
-              <th>GID</th>
-              <th>LID</th>
-              <th>객실타입</th>
-              <th>층수</th>
-              <th>방수</th>
-              <th>바코드</th>
-              <th>도어락 ID</th>
-              <th>예약가능</th>
-              <th>무인 숙박판매</th>
-              <th>무인 대실판매</th>
-              <th>무인 예약판매</th>
-              <th>삭제</th>
+              <th>일시</th>
+              <th>객실명</th>
+              <th>구분</th>
+              <th>숙박형태</th>
+              <th>근무자</th>
+              <th>상태</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
-              </td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="불가" :model-value="true" disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-btn density="compact" size="small" icon="mdi-trash-can-outline"></v-btn>
-              </td>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>자동</span></td>
+              <td><span>대실</span></td>
+              <td><span>auto</span></td>
+              <td><span class="color-green">숙박상태</span></td>
             </tr>
-            <tr v-for="item in 20" :key="item">
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
-              </td>
-              <td>201호</td>
-              <td>1</td>
-              <td>1</td>
-              <td>스위트룸</td>
-              <td>2층</td>
-              <td>1</td>
-              <td>1</td>
-              <td>D0EFF01</td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="가능"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-btn density="compact" size="small" icon="mdi-trash-can-outline"></v-btn>
-              </td>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>자동</span></td>
+              <td><span>숙박</span></td>
+              <td><span>admin</span></td>
+              <td><span>문[열림]</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td></td>
+              <td><span>auto</span></td>
+              <td><span class="color-secondary">퇴실</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td><span>대실</span></td>
+              <td><span>auto</span></td>
+              <td><span class="color-aqua">청소완료</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td><span>대실</span></td>
+              <td><span>auto</span></td>
+              <td><span class="color-primary">입실</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td></td>
+              <td><span>auto</span></td>
+              <td><span class="color-secondary">전원차단</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>자동</span></td>
+              <td></td>
+              <td><span>admin</span></td>
+              <td><span>프론트판매</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td><span>대실</span></td>
+              <td><span>auto</span></td>
+              <td><span class="color-yellow">청소요청</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>IDM</span></td>
+              <td><span>숙박</span></td>
+              <td><span>admin</span></td>
+              <td><span>외출복귀</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>자동</span></td>
+              <td><span>대실</span></td>
+              <td><span>auto</span></td>
+              <td><span class="color-green">숙박상태</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>자동</span></td>
+              <td><span>숙박</span></td>
+              <td><span>admin</span></td>
+              <td><span>문[열림]</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td></td>
+              <td><span>auto</span></td>
+              <td><span class="color-secondary">퇴실</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td><span>대실</span></td>
+              <td><span>auto</span></td>
+              <td><span class="color-aqua">청소완료</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td><span>대실</span></td>
+              <td><span>auto</span></td>
+              <td><span class="color-primary">입실</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td></td>
+              <td><span>auto</span></td>
+              <td><span class="color-secondary">전원차단</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>자동</span></td>
+              <td></td>
+              <td><span>admin</span></td>
+              <td><span>프론트판매</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>프론트</span></td>
+              <td><span>대실</span></td>
+              <td><span>auto</span></td>
+              <td><span class="color-yellow">청소요청</span></td>
+            </tr>
+            <tr>
+              <td><span>2022-12-24 17:23:02</span></td>
+              <td><span>302호</span></td>
+              <td><span>IDM</span></td>
+              <td><span>숙박</span></td>
+              <td><span>admin</span></td>
+              <td><span>외출복귀</span></td>
             </tr>
           </tbody>
         </v-table>
         <!-- //table -->
-        <!-- field-set -->
-        <fieldset class="field-set mt-3">
-          <v-table>
-            <colgroup>
-              <col style="width: 110px" />
-              <col style="width: *"/>
-              <col style="width: 130px" />
-              <col style="width: 220px" />
-              <col style="width: 110px" />
-              <col style="width: 220px" />
-            </colgroup>
-            <tbody>
-              <tr>
-                <th class="text-center">선택한 객실을</th>
-                <td>
-                  <div class="d-flex align-center">
-                    <v-select 
-                      :items="['선택', '스위트룸', 'VIP룸', '일반룸']"
-                      value="선택"
-                      density="compact"
-                      hide-details
-                      variant="outlined">
-                    </v-select>
-                    <span class="ml-2">타입으로 변경</span>
-                  </div>
-                </td>
-                <th class="text-center">선택한 객실 GID를</th>
-                <td>
-                  <input type="text" class="input" style="width: 100px;" />
-                  <span class="ml-2">으로</span>
-                  <v-btn color="grey" class="ml-2" size="small" style="min-width: 60px">변경</v-btn>
-                </td>
-                <th class="text-center">선택한 객실을</th>
-                <td>
-                  <div class="d-flex align-center">
-                    <v-select
-                      :items="['스위트룸', 'VIP룸', '일반룸']"
-                      value="스위트룸"
-                      density="compact"
-                      hide-details
-                      variant="outlined">
-                    </v-select>
-                    <v-btn color="grey" class="ml-2" size="small" style="min-width: 60px">적용</v-btn>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </v-table>
-        </fieldset>
-        <!-- //field-set -->
+
       </div>
       <!-- //popup-contents -->
+      <!-- pagination -->
+      <div class="text-center page-navigation">
+        <v-pagination v-model="page" :length="4" rounded="circle"></v-pagination>
+      </div>
+      <!-- /pagination -->
     </template>
     <!-- //slot -->
+    <template v-slot:footer>
+      <div class="btns">
+        <v-btn color="darkgrey" size="large" style="min-width: 150px">닫기</v-btn>
+      </div>
+    </template>
   </Popup>
-  <!-- //popup -->
-
-  <!-- popup -->
-  <v-dialog v-model="dialog" width="auto">
-    <!-- popup -->
-    <Popup :popup="popupAlert">
-      <!-- slot -->
-      <template v-slot:body>
-        <!-- popup-contents -->
-        <div class="popup-contents">
-          <div class="box-border d-flex flex-column align-center justify-center px-8" style="height: 140px;">
-            <div class="mb-5">
-              <v-icon color="secondary" class="mr-2">mdi-alert-circle</v-icon>
-              <span>추가할 객실명을 입력하세요</span>
-            </div>
-            <input type="text" class="input md" />
-          </div>
-        </div>
-        <!-- //popup-contents -->
-      </template>
-      <!-- //slot -->
-      <!-- slot -->
-      <template v-slot:footer>
-        <div class="btns">
-          <v-btn color="primary" size="large" style="min-width: 150px">추가</v-btn>
-          <v-btn color="darkgrey" size="large" style="min-width: 150px" @click="dialog = !dialog">취소</v-btn>
-        </div>
-      </template>
-      <!-- //slot -->
-    </Popup>
-    <!-- //popup -->
-    
-  </v-dialog>
   <!-- //popup -->
 </template>
 
 <script>
 import Popup from "@/components/popup/popup.vue";
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
 
 export default {
-  name: "RoomInfo",
+  name: "check_sales",
   components: {
-    Popup,
+    Popup, VueDatePicker
   },
   data: () => ({
     popup: {
-      title: "객실정보 관리",
+      title: "기간별 매출 집계",
       theme: "theme-popup-dark",
       size: "size-lg",
       align: "mx-auto",
     },
-    popupAlert: {
-      title: "객실추가",
-      theme: "theme-popup-light",
-      size: "size-sm",
-      align: "ml-3 mr-auto",
-    },
-    dialog: false,
+    date: null,
+    page:1,
   }),
 };
 </script>

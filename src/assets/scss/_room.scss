@@ -56,7 +56,7 @@
       }
     }
   }
-  .table-daypicker{
+.table-daypicker{
     position: relative;
     input{
         height: 28px;
@@ -66,4 +66,40 @@
         top: 290px;
         z-index: 100;
     }
-  }
+}
+.div-daypicker{
+    input{
+        height: 28px !important;
+    }
+}
+.bullet-text{
+    display: block;
+    position: relative;
+    font-size: 12px;
+    &::before{
+        width: 4px;
+        height: 4px;
+        background: #fc6060; 
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 8px;
+        content: "";
+    }
+}
+.field-set .field-check-group{
+    background-color: #fff;
+    padding: 3px 10px 0;
+    height: auto;
+    border: 1px solid #d6dbe2;
+    .check-group{
+        display: flex;
+        flex: 1;
+        flex-wrap: nowrap;
+        align-items: center;
+        & > *{
+            flex-grow: 0;
+            margin-right: 12px;
+        }
+    }
+}
