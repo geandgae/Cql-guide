@@ -402,7 +402,7 @@ export default {
           url: {
             to: '/room/room_status',
           },
-          status: '진행중',
+          status: '완료',
           memo: '-',
         },
         {
@@ -419,26 +419,14 @@ export default {
         },
         {
           type: '',
-          name: '28.예약관리',
+          name: '28.예약관리 / 29.예약등록',
           depth1: 'room',
           depth2: 'room_management',
           depth3: '-',
           url: {
             to: '/room/room_management',
           },
-          status: '진행중',
-          memo: '-',
-        },
-        {
-          type: '',
-          name: '29.예약등록',
-          depth1: 'room',
-          depth2: 'room_registration',
-          depth3: '-',
-          url: {
-            to: '/room/room_registration',
-          },
-          status: '진행중',
+          status: '완료',
           memo: '-',
         },
         {
