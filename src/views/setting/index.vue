@@ -6,13 +6,8 @@
       <!-- tabs -->
       <v-item-group v-model="setting" class="tabs">
         <div v-for="item in tabsItem" :key="item" :value="item">
-          <v-btn
-            v-if="item === '구독관리'"
-            color="white"
-            style="width: 80px; height: 76px !important; position: absolute"
-            @click="toggle(item)"
-            :class="setting === item ? 'active' : ''"
-          >
+          <v-btn v-if="item === '구독관리'" color="white" style="width: 80px; height: 76px !important; position: absolute"
+            @click="toggle(item)" :class="setting === item ? 'active' : ''">
             {{ item }}
           </v-btn>
           <v-btn v-else color="white" @click="toggle(item)" :class="setting === item ? 'active' : ''">
@@ -76,6 +71,17 @@
       <!-- //popup-contents -->
     </template>
     <!-- //slot -->
+    <!-- footer slot -->
+    <template v-slot:footer v-if="setting === '구독관리'">
+      <div class="popup-footer">
+        <slot name="footer">
+          <div class="btns">
+            <v-btn color="primary" size="large" style="min-width: 150px">닫기</v-btn>
+          </div>
+        </slot>
+      </div>
+    </template>
+    <!-- //footer slot -->
   </Popup>
   <!-- //popup -->
 </template>

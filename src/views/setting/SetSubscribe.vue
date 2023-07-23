@@ -114,8 +114,7 @@
         <tr>
           <th class="text-center" style="width: 100px;">구독 서비스명</th>
           <td style="width: 240px;">
-            <div class="field-content color-primary" style="font-weight: 500;"
-            >메이드 동시 접속 라이선스</div>
+            <div class="field-content color-primary" style="font-weight: 500;">메이드 동시 접속 라이선스</div>
           </td>
           <th class="text-center" style="width: 100px;">유료여부</th>
           <td style="width: 120px;">
@@ -205,11 +204,11 @@
       </tbody>
     </v-table>
     <div class="d-flex align-center justify-end my-2" style="gap: 8px;">
-        <v-btn color="darkgrey" size="small" style="min-width: 80px">구독변경</v-btn>
-        <v-btn color="grey" size="small" style="min-width: 80px">취소</v-btn>
+      <v-btn color="darkgrey" size="small" style="min-width: 80px">구독변경</v-btn>
+      <v-btn color="grey" size="small" style="min-width: 80px">취소</v-btn>
     </div>
   </fieldset>
-  <!-- /신규신청 -->
+  <!-- //신규신청 -->
 
   <!-- 구독추가 -->
   <fieldset class="field-set">
@@ -229,7 +228,8 @@
         <tr>
           <th class="text-center" style="width: 100px;">구독 서비스명</th>
           <td style="width: 240px;">
-            <v-select :items="['구독을 선택 해주세요.', 'select2', 'select3', 'select4', 'select5']" value="구독을 선택 해주세요." density="compact" hide-details style="width: 219px">
+            <v-select :items="['구독을 선택 해주세요.', 'select2', 'select3', 'select4', 'select5']" value="구독을 선택 해주세요."
+              density="compact" hide-details style="width: 219px">
             </v-select>
           </td>
           <th class="text-center" style="width: 100px;">유료여부</th>
@@ -252,19 +252,21 @@
         <tr>
           <th class="text-center" style="width: 124px;">구독 신청 시작일</th>
           <td>
-            <v-select :items="['2022-04-30', 'select2', 'select3', 'select4', 'select5']" value="2022-04-30" density="compact" hide-details style="width: 100%">
+            <v-select :items="['2022-04-30', 'select2', 'select3', 'select4', 'select5']" value="2022-04-30"
+              density="compact" hide-details style="width: 100%">
             </v-select>
           </td>
           <th class="text-center" style="width: 124px;">구독 신청 종료일</th>
           <td>
-            <v-select :items="['2022-04-30', 'select2', 'select3', 'select4', 'select5']" value="2022-04-30" density="compact" hide-details style="width: 100%">
+            <v-select :items="['2022-04-30', 'select2', 'select3', 'select4', 'select5']" value="2022-04-30"
+              density="compact" hide-details style="width: 100%">
             </v-select>
           </td>
         </tr>
       </tbody>
     </v-table>
   </fieldset>
-  
+
   <fieldset class="field-set">
     <v-table>
       <tbody>
@@ -285,11 +287,11 @@
       </tbody>
     </v-table>
     <div class="d-flex align-center justify-end my-2" style="gap: 8px;">
-        <v-btn color="darkgrey" size="small" style="min-width: 80px">신청</v-btn>
-        <v-btn color="grey" size="small" style="min-width: 80px">취소</v-btn>
+      <v-btn color="darkgrey" size="small" style="min-width: 80px">신청</v-btn>
+      <v-btn color="grey" size="small" style="min-width: 80px">취소</v-btn>
     </div>
   </fieldset>
-  <!-- /구독추가 -->
+  <!-- //구독추가 -->
 
   <!-- 구독정보 -->
   <fieldset class="field-set">
@@ -341,7 +343,7 @@
           <td>
             <div class="field-content">2022-04-30</div>
           </td>
-          
+
         </tr>
       </tbody>
     </v-table>
@@ -367,16 +369,14 @@
       </tbody>
     </v-table>
     <div class="d-flex align-center justify-end my-2" style="gap: 8px;">
-        <v-btn color="darkgrey" size="small" style="min-width: 80px">구독변경</v-btn>
-        <v-btn color="grey" size="small" style="min-width: 80px">취소</v-btn>
+      <v-btn color="darkgrey" size="small" style="min-width: 80px">구독변경</v-btn>
+      <v-btn color="grey" size="small" style="min-width: 80px">취소</v-btn>
     </div>
   </fieldset>
-  <!-- /구독정보 -->
-
-
-
+  <!-- //구독정보 -->
   <!-- //field-set -->
 </template>
+
 
 <script>
 export default {
