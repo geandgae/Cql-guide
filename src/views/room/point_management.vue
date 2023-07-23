@@ -143,7 +143,7 @@
 import Popup from "@/components/popup/popup.vue";
 
 export default {
-  name: "RoomInfo",
+  name: "PointManagement",
   components: {
     Popup,
   },

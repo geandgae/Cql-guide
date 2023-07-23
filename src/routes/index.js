@@ -30,6 +30,11 @@ export default createRouter ({
       name: 'setting',
       component: () => import("@/views/setting/index")
     },
+    {
+      path: '/setting/key_status',
+      name: 'settingkey',
+      component: () => import("@/views/setting/key_status")
+    },
     // test
     {
       path: '/test/popup',
@@ -161,15 +166,10 @@ export default createRouter ({
       name: 'point_management',
       component: () => import("@/views/room/point_management")
     },
-    { //28.예약관리
+    { //28.예약관리, 29.예약등록
       path: '/room/room_management',
       name: 'room_management',
       component: () => import("@/views/room/room_management")
-    },
-    { //29.예약등록
-      path: '/room/room_registration',
-      name: 'room_registration',
-      component: () => import("@/views/room/room_registration")
     },
     { //30.업소 게시판-알림목록
       path: '/room/board_alarm',

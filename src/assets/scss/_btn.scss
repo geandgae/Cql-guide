@@ -36,3 +36,18 @@
     margin-top: -2px;
   }
 }
+
+.btn-toggels {
+  display: flex;
+  align-items: center;
+  .v-btn {
+    width: 50%;
+    border: 1px solid #b7c2cf;
+    color: #2c2f35 !important;
+    &.active {
+      color: #fff !important;
+      background-color: $g-primary !important;
+      border-color: $g-primary !important;
+    }
+  }
+}

@@ -44,6 +44,17 @@ hr {
       display: flex;
       align-items: center;
     }
+    .like-th {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      color: #2c2f35 !important;
+      background-color: #eff2f4;
+      padding: 0 10px !important;
+      border-left: 1px solid #d6dbe2;
+      border-right: 1px solid #d6dbe2;
+      height: 38px;
+    }
   }
 }
 
@@ -226,4 +237,36 @@ hr {
       }
     }
   }
+}
+
+.dp__main.date-custom {
+  .dp__input_wrap {
+    input {
+      height: 28px !important;
+      border-radius: 0 !important;
+      border-color: #d6dbe2 !important;
+    }
+  }
+}
+
+.switch-custom {
+  .v-selection-control {
+    min-height: 48px !important;
+  }
+  .v-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2c2f35 !important;
+  }
+}
+
+.title-baener {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
 }

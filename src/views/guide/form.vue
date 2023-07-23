@@ -220,7 +220,7 @@
           </td>
           <th class="text-center">검색</th>
           <td>
-            <v-select :items="['foo', 'bar', 'fizz', 'buzz', 'fizzbuzz', 'foobar']" value="foo" density="compact" hide-details>
+            <v-select :items="['foo', 'bar', 'fizz', 'buzz', 'fizzbuzz', 'foobar']" value="foo" density="compact" class="custom-select" hide-details>
               <template v-slot:selection="{ item }">
                 <span>{{ item.title }}</span>
               </template>

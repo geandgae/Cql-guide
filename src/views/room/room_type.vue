@@ -4,7 +4,7 @@
     <!-- slot -->
     <template v-slot:body>
       <!-- popup-contents -->
-      <div class="popup-contents d-flex">
+      <div class="popup-contents">
         <v-row no-gutters style="min-height: 578px">
           <!-- left -->
           <div class="d-flex flex-column flex-shrink-0" style="width: 178px">

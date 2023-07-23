@@ -7,218 +7,189 @@
       <div class="popup-contents">
         <!-- field-set -->
         <fieldset class="field-set">
-          <h3 class="title-sub mb-4">객실정보 변경</h3>
           <v-table>
             <colgroup>
-              <col style="width: 110px" />
-              <col />
+              <col style="width: 243px" />
               <col style="width: 110px" />
               <col />
             </colgroup>
             <tbody>
               <tr>
+                <td>
+                  <div class="d-flex align-center" style="gap:8px;">
+                    <v-btn color="secondary" size="small" style="min-width: 70px">전체선택</v-btn>
+                    <v-btn color="grey" variant="outlined" size="small" style="min-width: 70px">선택해제</v-btn>
+                    <v-btn color="grey" variant="outlined" size="small" style="min-width: 70px">선택반전</v-btn>
+                  </div>
+                </td>
                 <th class="text-center">객실타입 선택</th>
                 <td>
                   <v-radio-group hide-details density="compact" inline>
                     <v-radio color="secondary" label="VIP룸" value="VIP룸"></v-radio>
                     <v-radio color="secondary" label="스위트룸" value="스위트룸" class="ml-4"></v-radio>
                     <v-radio color="secondary" label="일반실" value="일반실" class="ml-4"></v-radio>
-                    <v-radio color="secondary" label="없음" value="없음" class="ml-4"></v-radio>
                   </v-radio-group>
                 </td>
-                <th class="text-center">검색</th>
-                <td>
-                  <div class="input-search">
-                    <input type="text" />
-                    <v-btn density="compact" size="small" icon="mdi-magnify"></v-btn>
-                  </div>
-                </td>
               </tr>
             </tbody>
           </v-table>
         </fieldset>
         <!-- //field-set -->
-        <div class="d-flex align-center mt-3">
-          <v-checkbox hide-details density="compact" color="secondary" label="전체선택" class="flex-grow-0"></v-checkbox>
-          <v-btn color="white" class="custom-btn-icon-white ml-auto" prepend-icon="mdi-plus-thick" size="small" style="min-width: 80px" @click="dialog = !dialog">
-            <template v-slot:prepend>
-              <v-icon size="small" color="pa-0 ma-0"></v-icon>
-            </template>
-            객실추가
-          </v-btn>
-        </div>
-        <!-- table -->
-        <v-table fixed-header height="447" class="overflow-y-auto text-center dense-dark mt-2">
-          <colgroup>
-            <col />
-            <col />
-          </colgroup>
-          <thead>
-            <tr>
-              <th>선택</th>
-              <th>객실이름</th>
-              <th>GID</th>
-              <th>LID</th>
-              <th>객실타입</th>
-              <th>층수</th>
-              <th>방수</th>
-              <th>바코드</th>
-              <th>도어락 ID</th>
-              <th>예약가능</th>
-              <th>무인 숙박판매</th>
-              <th>무인 대실판매</th>
-              <th>무인 예약판매</th>
-              <th>삭제</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
-              </td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 50px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td><input type="text" class="input" style="width: 80px;" /></td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="불가" :model-value="true" disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="중지" :model-value="true"  disabled></v-checkbox>
-              </td>
-              <td>
-                <v-btn density="compact" size="small" icon="mdi-trash-can-outline"></v-btn>
-              </td>
-            </tr>
-            <tr v-for="item in 20" :key="item">
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
-              </td>
-              <td>201호</td>
-              <td>1</td>
-              <td>1</td>
-              <td>스위트룸</td>
-              <td>2층</td>
-              <td>1</td>
-              <td>1</td>
-              <td>D0EFF01</td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="가능"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-checkbox hide-details density="compact" color="secondary" label="허용"></v-checkbox>
-              </td>
-              <td>
-                <v-btn density="compact" size="small" icon="mdi-trash-can-outline"></v-btn>
-              </td>
-            </tr>
-          </tbody>
-        </v-table>
-        <!-- //table -->
-        <!-- field-set -->
-        <fieldset class="field-set mt-3">
-          <v-table>
-            <colgroup>
-              <col style="width: 110px" />
-              <col style="width: *"/>
-              <col style="width: 130px" />
-              <col style="width: 220px" />
-              <col style="width: 110px" />
-              <col style="width: 220px" />
-            </colgroup>
-            <tbody>
+        <v-row no-gutters class="mt-4" style="min-height: 630px">
+          <!-- left-->
+          <div class="flex-grow-1">
+            <!-- table -->
+            <v-table fixed-header height="630" class="overflow-y-auto text-center dense-dark">
+              <thead>
+                <tr>
+                  <th>선택</th>
+                  <th>객실타입</th>
+                  <th>객실명</th>
+                  <th>숙박현황</th>
+                  <th>객실상태</th>
+                  <th>키상태</th>
+                  <th>출입문</th>
+                  <th>사용중 &#8451;</th>
+                  <th>외출 &#8451;</th>
+                  <th>청소대기 &#8451;</th>
+                  <th>청소중 &#8451;</th>
+                  <th>공실 &#8451;</th>
+                  <th>무인숙박판매</th>
+                  <th>무인대실판매</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
+                  </td>
+                  <td>일반실</td>
+                  <td>201호</td>
+                  <td>공실</td>
+                  <td>공실</td>
+                  <td>NO KEY</td>
+                  <td>문 <span class="color-primary">[닫힘]</span></td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>허용</td>
+                  <td>허용</td>
+                </tr>
+                <tr>
+                  <td>
+                    <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
+                  </td>
+                  <td>일반실</td>
+                  <td>201호</td>
+                  <td>공실</td>
+                  <td>공실</td>
+                  <td>
+                    <div class="d-inline-flex align-center">
+                      <div class="mr-1">고객키</div>
+                      <v-icon color="secondary">mdi-close-thick</v-icon>
+                    </div>
+                  </td>
+                  <td>문 <span class="color-secondary">[열림]</span></td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td><span class="color-secondary">중지</span></td>
+                  <td><span class="color-secondary">중지</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <v-checkbox hide-details density="compact" color="secondary"></v-checkbox>
+                  </td>
+                  <td>일반실</td>
+                  <td>201호</td>
+                  <td>공실</td>
+                  <td>공실</td>
+                  <td>
+                    <div class="d-inline-flex align-center">
+                      <div class="mr-1">고객키</div>
+                      <v-icon color="dark-grey">mdi-circle-outline</v-icon>
+                    </div>
+                  </td>
+                  <td>문 <span class="color-secondary">[열림]</span></td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td>26</td>
+                  <td><span class="color-secondary">중지</span></td>
+                  <td><span class="color-secondary">중지</span></td>
+                </tr>
+                
+              </tbody>
+            </v-table>
+            <!-- //table -->
+          </div>
+          <!-- //left-->
+
+          <!-- right -->
+          <div class="d-flex flex-column flex-shrink-0 ml-2" style="width: 274px">
+            <v-sheet class="box-border pa-1 d-flex flex-wrap ctrl-box" style="gap: 6px;">
+              <v-btn color="secondary" size="small" style="min-width: 84px">대실입실</v-btn>
+              <v-btn v-for="item in btns" :key="item" color="grey" size="small" style="width: 84px">{{item}}</v-btn>
+            </v-sheet>
+            <div class="mt-4">
+              <v-table>
+                <tr>
+                  <th class="text-left">객실 표시 내용 입력</th>
+                </tr>
+                <tr>
+                  <td>
+                    <textarea class="textarea" placeholder="표시할 내용을 입력하세요." style="height: 190px; margin: 6px 0;"></textarea>
+                  </td>
+                </tr>
+              </v-table>
+              <div class="d-flex align-center mt-1">
+                <v-btn color="darkgrey" size="small" style="min-width: 135px">적용</v-btn>
+                <v-btn color="primary" size="small" style="min-width: 135px" class="ml-auto">삭제</v-btn>
+              </div>
+            </div>
+            <v-table class="mt-4">
+              <colgroup>
+                <col style="width: 120px" />
+                <col />
+              </colgroup>
               <tr>
-                <th class="text-center">선택한 객실을</th>
+                <th class="text-left">무인 숙박 판매</th>
                 <td>
-                  <div class="d-flex align-center">
-                    <v-select 
-                      :items="['선택', '스위트룸', 'VIP룸', '일반룸']"
-                      value="선택"
-                      density="compact"
-                      hide-details
-                      variant="outlined">
-                    </v-select>
-                    <span class="ml-2">타입으로 변경</span>
-                  </div>
-                </td>
-                <th class="text-center">선택한 객실 GID를</th>
-                <td>
-                  <input type="text" class="input" style="width: 100px;" />
-                  <span class="ml-2">으로</span>
-                  <v-btn color="grey" class="ml-2" size="small" style="min-width: 60px">변경</v-btn>
-                </td>
-                <th class="text-center">선택한 객실을</th>
-                <td>
-                  <div class="d-flex align-center">
-                    <v-select
-                      :items="['스위트룸', 'VIP룸', '일반룸']"
-                      value="스위트룸"
-                      density="compact"
-                      hide-details
-                      variant="outlined">
-                    </v-select>
-                    <v-btn color="grey" class="ml-2" size="small" style="min-width: 60px">적용</v-btn>
-                  </div>
+                  <v-switch v-model="model" true-value="중지" false-value="허용" :label="`${model}`" color="secondary" inset hide-details class="switch-custom"></v-switch>
                 </td>
               </tr>
-            </tbody>
-          </v-table>
-        </fieldset>
-        <!-- //field-set -->
+              <tr>
+                <th class="text-left">무인 대실 판매</th>
+                <td>
+                  <v-switch v-model="model2" true-value="중지" false-value="허용" :label="`${model2}`" color="secondary" inset hide-details class="switch-custom"></v-switch>
+                </td>
+              </tr>
+              <tr>
+                <th class="text-left">무인 예약 판매</th>
+                <td>
+                  <v-switch v-model="model3" true-value="중지" false-value="허용" :label="`${model3}`" color="secondary" inset hide-details class="switch-custom"></v-switch>
+                </td>
+              </tr>
+            </v-table>
+          </div>
+          <!-- //right -->
+        </v-row>
       </div>
       <!-- //popup-contents -->
     </template>
     <!-- //slot -->
+    <!-- //slot -->
+    <template v-slot:footer>
+      <div class="btns">
+        <v-btn color="darkgrey" size="large" style="min-width: 150px">닫기</v-btn>
+      </div>
+    </template>
   </Popup>
-  <!-- //popup -->
-
-  <!-- popup -->
-  <v-dialog v-model="dialog" width="auto">
-    <!-- popup -->
-    <Popup :popup="popupAlert">
-      <!-- slot -->
-      <template v-slot:body>
-        <!-- popup-contents -->
-        <div class="popup-contents">
-          <div class="box-border d-flex flex-column align-center justify-center px-8" style="height: 140px;">
-            <div class="mb-5">
-              <v-icon color="secondary" class="mr-2">mdi-alert-circle</v-icon>
-              <span>추가할 객실명을 입력하세요</span>
-            </div>
-            <input type="text" class="input md" />
-          </div>
-        </div>
-        <!-- //popup-contents -->
-      </template>
-      <!-- //slot -->
-      <!-- slot -->
-      <template v-slot:footer>
-        <div class="btns">
-          <v-btn color="primary" size="large" style="min-width: 150px">추가</v-btn>
-          <v-btn color="darkgrey" size="large" style="min-width: 150px" @click="dialog = !dialog">취소</v-btn>
-        </div>
-      </template>
-      <!-- //slot -->
-    </Popup>
-    <!-- //popup -->
-    
-  </v-dialog>
   <!-- //popup -->
 </template>
 
@@ -226,24 +197,35 @@
 import Popup from "@/components/popup/popup.vue";
 
 export default {
-  name: "RoomInfo",
+  name: "RoomStatus",
   components: {
     Popup,
   },
   data: () => ({
+    model: '허용',
+    model2: '중지',
+    model3: '허용',
+    btns: [
+      '청소지시', 
+      '사용중 온도',
+      '숙박 입실',
+      '청소 완료',
+      '외출중 온도',
+      '입실 취소',
+      '외출',
+      '청소대기 온도',
+      '퇴실',
+      '외축복귀',
+      '청소중 온도',
+      '공실',
+      '공실온도',
+    ],
     popup: {
-      title: "객실정보 관리",
+      title: "일괄 처리",
       theme: "theme-popup-dark",
-      size: "size-lg",
+      size: "size-xlg",
       align: "mx-auto",
     },
-    popupAlert: {
-      title: "객실추가",
-      theme: "theme-popup-light",
-      size: "size-sm",
-      align: "ml-3 mr-auto",
-    },
-    dialog: false,
   }),
 };
 </script>
