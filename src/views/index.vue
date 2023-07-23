@@ -278,8 +278,8 @@ export default {
           url: {
             to: '/room/room_inquiry',
           },
-          status: '진행중',
-          memo: '',
+          status: '완료',
+          memo: '백인환:07-23',
         },
         {
           type: '',
