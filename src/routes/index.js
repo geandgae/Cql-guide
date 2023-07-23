@@ -123,7 +123,7 @@ export default createRouter ({
     { //18.객실설정
       path: '/room/room_setting',
       name: 'room_setting',
-      component: () => import("@/views/room/room_event")
+      component: () => import("@/views/room/room_setting")
     },
     { //19.시뮬레이터
       path: '/room/simulator',
@@ -136,9 +136,9 @@ export default createRouter ({
       component: () => import("@/views/room/sales_status")
     },
     { //23.포인트이력조회
-      path: '/room/sales_status',
-      name: 'sales_status',
-      component: () => import("@/views/room/sales_status")
+      path: '/room/point_list',
+      name: 'point_list',
+      component: () => import("@/views/room/point_list")
     },
     // management
     {//24.객실정보 관리
