@@ -112,13 +112,13 @@
           <p>total: <span class="text-secondary">46</span>개</p>
           <div class="d-flex align-center">
             <v-select 
-                :items="['10개씩 보기', '20개씩 보기', '30개씩 보기']" 
-                value="10개씩 보기" 
-                density="compact" 
-                hide-details
-                class="mr-2"
-                style="width:110px !important;background-color: #fff;">
-              </v-select>
+              :items="['10개씩 보기', '20개씩 보기', '30개씩 보기']" 
+              value="10개씩 보기" 
+              density="compact" 
+              hide-details
+              class="mr-2"
+              style="width:110px !important;background-color: #fff;">
+            </v-select>
             <v-btn color="white" class="custom-btn-icon-white ml-auto" prepend-icon="mdi-close-box" size="small" style="min-width: 80px" @click="dialog = !dialog">
               <template v-slot:prepend>
                 <v-icon size="medium" color="" style="color: #0e6d10;"></v-icon>

@@ -144,7 +144,7 @@ export default createRouter ({
     {//24.객실정보 관리
       path: '/management/roominfo',
       name: 'roominfo',
-      component: () => import("@/views/management/RoomInfo")
+      component: () => import("@/views/management/roomInfo")
     },
     { //25.객실타입 관리
       path: '/room/room_type',
