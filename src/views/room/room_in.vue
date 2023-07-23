@@ -544,8 +544,8 @@
     <!-- //slot -->
     <template v-slot:footer>
       <div class="btns">
-        <v-btn color="secondary" size="large" style="min-width: 150px">취소</v-btn>
-        <v-btn color="darkgrey" size="large" style="min-width: 150px">저장</v-btn>
+        <v-btn color="darkgrey" size="large" style="min-width: 150px">취소</v-btn>
+        <v-btn color="primary" size="large" style="min-width: 150px">저장</v-btn>
       </div>
     </template>
   </Popup>

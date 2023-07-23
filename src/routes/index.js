@@ -162,9 +162,9 @@ export default createRouter ({
       component: () => import("@/views/room/point_management")
     },
     { //28.예약관리
-      path: '/room/room_reservation',
-      name: 'room_reservation',
-      component: () => import("@/views/room/room_reservation")
+      path: '/room/room_management',
+      name: 'room_management',
+      component: () => import("@/views/room/room_management")
     },
     { //29.예약등록
       path: '/room/room_registration',

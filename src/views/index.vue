@@ -266,8 +266,8 @@ export default {
           url: {
             to: '/room/room_reservation',
           },
-          status: '대기',
-          memo: '',
+          status: '완료',
+          memo: '백인환:07-23',
         },
         {
           type: '',
@@ -278,7 +278,7 @@ export default {
           url: {
             to: '/room/room_inquiry',
           },
-          status: '대기',
+          status: '진행중',
           memo: '',
         },
         {
@@ -290,7 +290,7 @@ export default {
           url: {
             to: '/room/check_sales',
           },
-          status: '대기',
+          status: '진행중',
           memo: '',
         },
         {
@@ -421,10 +421,10 @@ export default {
           type: '',
           name: '28.예약관리',
           depth1: 'room',
-          depth2: 'room_reservation',
+          depth2: 'room_management',
           depth3: '-',
           url: {
-            to: '/room/room_reservation',
+            to: '/room/room_management',
           },
           status: '대기',
           memo: '-',

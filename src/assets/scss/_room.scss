@@ -48,11 +48,22 @@
       font-size: 14px !important;
       font-weight: bold;
       color: #2c2f35 !important;
-      background-color: #fff;
+      background-color: #f9f9f9;
       border: 1px solid #bebfc0;
       &.v-btn--active {
-        background-color: $g-primary !important;
+        background-color: $g-secondary !important;
         color: #fff !important;
       }
+    }
+  }
+  .table-daypicker{
+    position: relative;
+    input{
+        height: 28px;
+    }
+    .dp__outer_menu_wrap{
+        position: fixed;
+        top: 290px;
+        z-index: 100;
     }
   }
