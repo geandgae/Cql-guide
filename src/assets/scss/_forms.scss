@@ -59,10 +59,19 @@ hr {
 }
 
 .v-checkbox {
+  &.light{
+    .v-label {
+      font-size: 12px !important;
+      color: #fff !important;
+      font-weight: bold;
+      opacity: 1;
+    }
+  }
   .v-label {
     font-size: 12px !important;
     color: #2c2f35 !important;
   }
+  
 }
 
 .v-radio {

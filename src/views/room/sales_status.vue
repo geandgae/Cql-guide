@@ -304,7 +304,6 @@
       <!-- //popup-contents -->
     </template>
     <!-- //slot -->
-    <!-- //slot -->
     <template v-slot:footer>
       <div style="height: 20px;"></div>
     </template>

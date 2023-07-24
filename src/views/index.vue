@@ -300,7 +300,7 @@ export default {
           depth2: 'room_history',
           depth3: '-',
           url: {
-            to: '/room/check_history',
+            to: '/room/room_history',
           },
           status: '대기',
           memo: '',
@@ -312,9 +312,9 @@ export default {
           depth2: 'room_event',
           depth3: '-',
           url: {
-            to: '/room/check_event',
+            to: '/room/room_event',
           },
-          status: '대기',
+          status: '완료',
           memo: '',
         },
         {
@@ -350,7 +350,7 @@ export default {
           url: {
             to: '/room/sales_status',
           },
-          status: '대기',
+          status: '완료',
           memo: '',
         },
 

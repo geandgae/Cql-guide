@@ -268,4 +268,173 @@
 
    
 }
+.v-table {
+    &.sm{
+        table {
+            th,
+            td {
+              height: 32px !important;
+            }
+
+        }
+    }
+    &.no-border{
+        width: 100%;
+        table{
+            border: 0;
+        }
+        tr{
+            &:not(:last-child){
+                >td{
+                border-bottom: 0 !important;
+                }
+            }
+        }
+        th{
+            position: sticky; top: 0; z-index: 1;
+        }
+        td {
+            vertical-align: baseline;
+            &.right{
+                text-align: right;
+            }
+            border: 0;
+            height: auto !important;
+            padding: 5px 0 !important;
+            > span {
+                width: 100%;
+                height: auto !important;
+                &.gray{
+                    width: 100%;
+                    color: #aaa;
+                    padding-right: 10px;
+                }
+                &.point{
+                    display: block;
+                    border-radius: 16px;
+                    padding: 1px 7px 3px;
+                    color: #fc6060;
+                    border: 1px solid #fc6060;
+                    font-size: 11px;
+                    max-width: 42px;
+                }
+                &.icon-type01{
+                    text-align: center;
+                    display: block;
+                    border-radius: 16px;
+                    padding: 1px 7px 3px;
+                    background-color: #5e7892;
+                    color: #fff;
+                    font-size: 11px;
+                    max-width: 42px;
+                    margin: 0 auto;
+                }
+                &.icon-type02{
+                    display: block;
+                    text-align: center;
+                    border-radius: 16px;
+                    padding: 1px 7px 3px;
+                    background-color: #ffaa00;
+                    color: #fff;
+                    font-size: 11px;
+                    max-width: 42px;
+                    margin: 0 auto;
+                }
+                &.icon-type03{
+                    display: block;
+                    text-align: center;
+                    border-radius: 16px;
+                    padding: 1px 7px 3px;
+                    background-color: #fc6060;
+                    color: #fff;
+                    font-size: 11px;
+                    max-width: 42px;
+                    margin: 0 auto;
+                }
+                &.icon-type04{
+                    display: block;
+                    text-align: center;
+                    border-radius: 16px;
+                    padding: 1px 5px 3px;
+                    background-color: #2680eb;
+                    color: #fff;
+                    font-size: 11px;
+                    max-width: 42px;
+                    letter-spacing: 0.8;
+                    margin: 0 auto;
+                }
+                &.icon-type05{
+                    display: block;
+                    text-align: center;
+                    border-radius: 16px;
+                    padding: 1px 7px 3px;
+                    background-color: #52ace0;
+                    color: #fff;
+                    font-size: 11px;
+                    max-width: 42px;
+                    letter-spacing: 0.8;
+                    margin: 0 auto;
+                }            
+            }
+            > div{
+                display: block;
+                .new{display: inline-block;
+                    background-color: #fc6060;
+                    padding: 0 5px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #fff;
+                    border-radius: 2px;
+                    margin-left: 10px;
+                }
+                .end{display: inline-block;
+                    background-color:#52ace0;
+                    padding: 0 7px;
+                    font-size: 11px;
+                    color: #fff;
+                    border-radius: 2px;
+                    margin-left: 10px;
+                }
+            }
+            > div + div{
+                margin-top: 5px;
+            }
+        }
+        tbody {
+            &.type2{
+                span{
+                    margin: 0 auto;
+                }
+                td{
+                    padding: 8px 0  8px 4px!important;
+                    margin: 0 auto;
+                    text-align: center;
+                    div{
+                        text-align: left;
+                        padding-left: 10px;
+                    }
+                }
+                div{
+
+                }
+            }
+            tr:hover {
+            td {
+                background-color: #eff2f4;
+            }
+            }
+            tr.active {
+            td {
+                background-color: #dbe3ee;
+            }
+            }
+            tr.newapp {
+                td {
+                    background-color: #fbf6c7;
+                }
+            }
+        }
+    }
+    
+}
 
