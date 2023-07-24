@@ -54,6 +54,11 @@
       <Chart></Chart>
     </div>
 
+    <!-- chart2 -->
+    <div v-if="tab === 'chart2'" class="py-10">
+      <Chart2></Chart2>
+    </div>
+
     <!-- chart -->
     <div v-if="tab === 'datepicker'" class="py-10">
       <Datepicker></Datepicker>
@@ -68,6 +73,7 @@ import Gpopup from "./gpopup.vue";
 import Form from "./form.vue";
 import Fontg from "./font.vue";
 import Chart from "./gchart.vue";
+import Chart2 from "./googleChart.vue";
 import Icon from "./icon.vue";
 import Color from "./color.vue";
 import Gtable from "./guidetable.vue";
@@ -82,6 +88,7 @@ export default {
     Form,
     Fontg,
     Chart,
+    Chart2,
     Icon,
     Color,
     Gtable,
@@ -101,6 +108,7 @@ export default {
         'form', 
         'table', 
         'chart',
+        'chart2',
         'datepicker',
       ]
     };
