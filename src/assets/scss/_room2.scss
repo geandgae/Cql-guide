@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+.v-container {
+    &.roomBoard{
+        padding: 0;
+    }
+}
+.popup {
+    &.theme-popup-dark {
+        .v-card {
+          .v-card-title {
+            background-color: $g-darknavy;
+            height: 60px;
+            .title {
+              color: #fff;
+            }
+          }
+        }
+      }
+}
+.room-btn-area{
+    .v-btn__append {
+       margin: 0 !important;
+    }
+    .v-btn__prepend {
+        margin: 0 !important;
+     }
+}
+.btn-status-change{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #d6dbe2;
+    padding: 8px;
+    
+}
+.check-btns {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px !important;
+    .v-btn { 
+      width: 12.5% !important;
+      height: auto;
+      font-size: 14px !important;
+      font-weight: bold;
+      color: #2c2f35 !important;
+      background-color: #f9f9f9;
+      border: 1px solid #bebfc0;
+      &.v-btn--active {
+        background-color: $g-secondary !important;
+        color: #fff !important;
+      }
+    }
+  }
+.table-daypicker{
+    position: relative;
+    input{
+        height: 28px;
+    }
+    .dp__outer_menu_wrap{
+        position: fixed;
+        top: 290px;
+        z-index: 100;
+    }
+}
+.div-daypicker{
+    input{
+        height: 28px !important;
+    }
+}
+.bullet-text{
+    display: block;
+    position: relative;
+    font-size: 12px;
+    &::before{
+        width: 4px;
+        height: 4px;
+        background: #fc6060; 
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 8px;
+        content: "";
+    }
+}
+.field-set .field-check-group{
+    background-color: #fff;
+    padding: 3px 10px 0;
+    height: auto;
+    border: 1px solid #d6dbe2;
+    .check-group{
+        display: flex;
+        flex: 1;
+        flex-wrap: nowrap;
+        align-items: center;
+        & > *{
+            flex-grow: 0;
+            margin-right: 12px;
+        }
+    }
+}
+.table-check-group{
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    align-items: center;
+    & > *{
+        flex-grow: 0;
+    }
+}
