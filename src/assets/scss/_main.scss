@@ -461,6 +461,18 @@ header {
     }
   }
 
+  input[type=file] {
+    border: 1px solid #ddd;
+    height: 28px;
+  }
+
+  input[type=text],
+  input[type=password],
+  textarea {
+    border: 1px solid #bcbfc3;
+    height: 28px;
+  }
+
   section {
     display: flex;
     flex-wrap: wrap;
@@ -577,7 +589,7 @@ header {
 
             &::after {
               content: '';
-              display: inline-block; 
+              display: inline-block;
               width: 1px;
               height: 14px;
               background: #bcbdbe;
@@ -1295,6 +1307,11 @@ header {
                 transform: rotate(180deg);
               }
             }
+
+            .highcharts-container {
+              height: 172px !important;
+            }
+
           }
 
         }

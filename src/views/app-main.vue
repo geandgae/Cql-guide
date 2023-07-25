@@ -791,7 +791,7 @@ export default {
         yAxis: {
           min: 0,
           title: {
-            text: "avarage",
+            text: "",
           },
         },
         tooltip: {
@@ -806,11 +806,11 @@ export default {
         },
         series: [
           {
-            name: "현재상품",
+            name: "오늘",
             data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6],
           },
           {
-            name: "유사상품",
+            name: "어제",
             data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0],
           },
         ],
