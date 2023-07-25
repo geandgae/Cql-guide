@@ -279,3 +279,17 @@ hr {
   font-weight: 700;
   color: #fff;
 }
+
+
+// 임시
+.custom-bar {
+  .v-selection-control .v-label {
+    color: #fff !important;
+    opacity: 1;
+  }
+  // .v-select .v-field .v-field__input > input {
+  //   border: none !important;
+  //   background-color: transparent !important;
+  //   margin-top: -4px !important;
+  // }
+} 
