@@ -144,7 +144,7 @@ export default {
           url: {
             to: '/dashboard/registration_status',
           },
-          status: '대기',
+          status: '완료',
           memo: '-',
         },
         {

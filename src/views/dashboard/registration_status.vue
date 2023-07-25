@@ -58,7 +58,6 @@
 
                 <div class="title-2 my-2">App 통계</div>
 
-                <!-- btn_taps -->
                 <div>
                   <v-radio-group hide-details density="compact" inline>
                     <v-radio color="secondary" label="일간통계" value="일간통계"></v-radio>
@@ -66,43 +65,20 @@
                     <v-radio color="secondary" label="월간통계" value="월간통계"></v-radio>
                   </v-radio-group>
                 </div>
-                <!-- </btn_taps> -->
               </div>
 
-                <!-- btn_btn -->
-                <div class="d-flex align-center justify-space-between" style="background-color: #d3d9e0;">
-                  <v-btn :class="{ active: slides === '1주' }" rounded="0" size="small" @click="btnSlide(0)" style="background-color: #d3d9e0;">
-                    &lt;
+                <div class="d-flex align-center justify-space-between" style="height:30px; background-color: #d3d9e0;">
+                  <v-btn variant="text" style="min-width: 50px; height: 30px;">
+                    <v-icon color="darkgrey" size="large">mdi-chevron-left</v-icon>
                   </v-btn>
-                  
-                <div class="title-sub">1주</div>
-
-                  <v-btn :class="{ active: slides === '2주' }" rounded="0" size="small" @click="btnSlide(1)" style="background-color: #d3d9e0;">
-                    &gt;
+                  <div class="title-sub">1주</div>
+                  <v-btn variant="text" style="min-width: 50px; height: 30px;">
+                    <v-icon color="darkgrey" size="large">mdi-chevron-right</v-icon>
                   </v-btn>
                 </div>
-                <!-- </btn_btn> -->
-<!-- 
-              <div class="d-flex align-center" >
-                <div class="title-sub">&lt;</div>
-                <div class="title-sub">&gt;</div>
-              </div> -->
               
               
-              <!-- day -->
-              <div v-if="slides === '0'" class="py-4">
-                <Chart2 class="pa-2" style="width:200px ; height: 200px;"></Chart2>
-              </div>
-
-              <!-- week -->
-              <div v-if="slides === '1'" class="py-4">
-                <div>week</div>
-              </div>
-
-              <!-- month -->
-              <div v-if="slides === '2'" class="py-4">
-                <div>month</div>
-              </div>
+              <Chart2 class="pa-2" style="height: 230px;"></Chart2>
             </v-sheet>
             <!-- //vsheet -->
             <!-- //vsheet -->
@@ -146,13 +122,13 @@
 
             <!-- vsheet -->
             <v-sheet class="box-border mt-3 overflow-y-auto" style="height: 306px;">
-              <div class="d-flex align-center bg-darkgrey px-2" style="height: 40px;">
+              <div class="d-flex align-center px-2 bg-darkgrey custom-bar" style="height: 40px;">
                 <span class="title-2 mr-4">예약현황</span>
-                <v-checkbox hide-details density="compact" color="secondary" label="전체" class="mr-2"></v-checkbox>
-                <v-checkbox hide-details density="compact" color="secondary" label="숙박" class="mr-2"></v-checkbox>
-                <v-checkbox hide-details density="compact" color="secondary" label="대실" class="mr-2"></v-checkbox>
-                <v-select :items="['총선택']" value="총선택" density="compact" hide-details style="width: 80px">
-                </v-select>
+                <v-checkbox hide-details density="compact" color="secondary" label="전체" style="width: 40px;!important"></v-checkbox>
+                <v-checkbox hide-details density="compact" color="secondary" label="숙박" style="width: 40px;!important"></v-checkbox>
+                <v-checkbox hide-details density="compact" color="secondary" label="대실" style="width: 40px;!important"></v-checkbox>
+                <v-select :items="['층 선택']" value="층 선택" density="compact" class="custom-select ml-2" hide-details style="width: 80px">
+            </v-select>
               </div>
               <div class="d-flex align-center ma-2">
                 <div class="d-flex align-center bg-lightgrey pa-3" style="width: 100%; height: 38px; border-radius: 3px;">
