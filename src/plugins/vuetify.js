@@ -16,6 +16,7 @@ export default createVuetify({
           secondary: '#fc6060',
           black: '#000',
           darknavy: '#304153',
+          lightgrey: '#eff2f4',
           grey: '#5e7892',
           darkgrey: '#3c4d60',
           deepgrey: '#2c2f35',

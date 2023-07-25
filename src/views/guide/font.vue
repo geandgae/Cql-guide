@@ -10,6 +10,10 @@
   <div class="title color-primary">title 18px color-primary</div>
   <div class="title color-secondary">title 18px color-secondary</div>
   <v-spacer class="my-5"></v-spacer>
+  <div class="title-2">title 16px</div>
+  <div class="title-2 color-primary">title 16px color-primary</div>
+  <div class="title-2 color-secondary">title 16px color-secondary</div>
+  <v-spacer class="my-5"></v-spacer>
   <div class="title-sub">title-sub 14px</div>
   <div class="title-sub">조회일자</div>
   <div class="title-sub">필터옵션</div>
