@@ -11,10 +11,10 @@
             <!-- vsheet -->
             <v-sheet class="box-border" style="height: 280px;">
 
-              <div class="d-flex align-center justify-center bg-lightgrey w-100 ma-0 pa-2"
+              <div class="d-flex align-center justify-space-between bg-lightgrey w-100 ma-0 py-2 px-6"
                 style="height: 42px; border-bottom: 1px solid #d6dbe2;">
 
-                <div class="title-2 my-2 mr-8">예약현황</div>
+                <div class="title-2 my-2">예약현황</div>
 
                 <!-- btn_taps -->
                 <div class="btn-toggels">
@@ -53,33 +53,54 @@
             <!-- vsheet -->
             <v-sheet class="box-border mt-3 overflow-y-auto" style="height: 306px;">
 
-              <div class="d-flex align-center justify-space-between w-100 ma-0 pa-2"
+              <div class="d-flex align-center justify-space-between w-100 ma-0 py-2 px-6"
                 style="height: 42px; border-bottom: 1px solid #d6dbe2;">
 
-                <div class="title-2 my-2 mr-8">App 통계</div>
+                <div class="title-2 my-2">App 통계</div>
 
                 <!-- btn_taps -->
-                <v-radio-group hide-details density="compact" inline>
-                  <v-radio color="secondary" label="일간통계" value="일간통계"></v-radio>
-                  <v-radio color="secondary" label="주간통계" value="주간통계"></v-radio>
-                  <v-radio color="secondary" label="월간통계" value="월간통계"></v-radio>
-                </v-radio-group>
-                  <!-- </btn_taps> -->
+                <div>
+                  <v-radio-group hide-details density="compact" inline>
+                    <v-radio color="secondary" label="일간통계" value="일간통계"></v-radio>
+                    <v-radio color="secondary" label="주간통계" value="주간통계"></v-radio>
+                    <v-radio color="secondary" label="월간통계" value="월간통계"></v-radio>
+                  </v-radio-group>
+                </div>
+                <!-- </btn_taps> -->
               </div>
 
+                <!-- btn_btn -->
+                <div class="d-flex align-center justify-space-between" style="background-color: #d3d9e0;">
+                  <v-btn :class="{ active: slides === '1주' }" rounded="0" size="small" @click="btnSlide(0)" style="background-color: #d3d9e0;">
+                    &lt;
+                  </v-btn>
+                  
+                <div class="title-sub">1주</div>
 
+                  <v-btn :class="{ active: slides === '2주' }" rounded="0" size="small" @click="btnSlide(1)" style="background-color: #d3d9e0;">
+                    &gt;
+                  </v-btn>
+                </div>
+                <!-- </btn_btn> -->
+<!-- 
+              <div class="d-flex align-center" >
+                <div class="title-sub">&lt;</div>
+                <div class="title-sub">&gt;</div>
+              </div> -->
+              
+              
               <!-- day -->
-              <div v-if="toggle === 0" class="py-4">
-                <Chart2 class="pa-2" style="height: 200px;"></Chart2>
+              <div v-if="slides === '0'" class="py-4">
+                <Chart2 class="pa-2" style="width:200px ; height: 200px;"></Chart2>
               </div>
 
               <!-- week -->
-              <div v-if="toggle === 1" class="py-4">
+              <div v-if="slides === '1'" class="py-4">
                 <div>week</div>
               </div>
 
               <!-- month -->
-              <div v-if="toggle === 2" class="py-4">
+              <div v-if="slides === '2'" class="py-4">
                 <div>month</div>
               </div>
             </v-sheet>
@@ -221,13 +242,22 @@ export default {
       'week',
       'month',
     ],
+    slides: [
+          '1주',
+          '2주',
+          '3주',
+          '4주',
+        ],
   }),
   methods: {
     // toggle(val) {
     //   this.setting = val;
     // },
-    btnTog (val) {
+    btnTog(val) {
       this.toggle = val;
+    },
+    btnSlide(val) {
+      this.slides = val;
     }
   },
 }
@@ -271,10 +301,12 @@ export default {
 .btn-toggels {
   display: flex;
   align-items: center;
+
   .v-btn {
     width: 80px;
     border: 1px solid #b7c2cf;
     color: #2c2f35 !important;
+
     &.active {
       color: #fc6060 !important;
       background-color: white !important;
