@@ -302,7 +302,7 @@ export default {
           url: {
             to: '/room/room_history',
           },
-          status: '대기',
+          status: '완료',
           memo: '',
         },
         {
