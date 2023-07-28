@@ -22,6 +22,21 @@ export default createRouter ({
       path: '/app-main',
       name: 'app-main',
       component: () => import("@/views/app-main")
+    }, 
+    {
+      path: '/div/time-m',
+      name: 'time-m',
+      component: () => import("@/views/div/time-m") 
+    },
+    {
+      path: '/div/room-sett',
+      name: 'room-sett',
+      component: () => import("@/views/div/room-sett") 
+    },
+    {
+      path: '/div/setting-r',
+      name: 'setting-r',
+      component: () => import("@/views/div/setting-r") 
     },
   
     // setting
