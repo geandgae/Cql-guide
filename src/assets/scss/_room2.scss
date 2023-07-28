@@ -1414,6 +1414,14 @@
     background: #f2f5f8;
     padding-bottom: 26px;
 
+    .checkbox .txt::before {
+        background: url(@/assets/images/checkbox-line.png) center center no-repeat;
+    }
+
+    .checkbox>input:checked+.txt::before {
+        background: url(@/assets/images/checkbox-on.png) center center no-repeat;
+    }
+
     .room-list {
         width: 140px;
         border: 1px solid #d6dbe2;
