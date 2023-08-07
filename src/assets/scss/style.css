@@ -4327,6 +4327,12 @@ select::-ms-expand {
   background: #f2f5f8;
   padding-bottom: 26px;
 }
+#settingR .checkbox .txt::before {
+  background: url(@/assets/images/checkbox-line.png) center center no-repeat;
+}
+#settingR .checkbox > input:checked + .txt::before {
+  background: url(@/assets/images/checkbox-on.png) center center no-repeat;
+}
 #settingR .room-list {
   width: 140px;
   border: 1px solid #d6dbe2;
@@ -4660,6 +4666,141 @@ select::-ms-expand {
   color: #fff;
   line-height: 24px;
   text-align: center;
+}
+
+#loginWrapper .login-area {
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loginWrapper .login-area .login {
+  width: 400px;
+  height: 515px;
+}
+#loginWrapper .login-area .login .login-tit {
+  font-size: 78px;
+  font-family: "sebangb";
+  text-align: center;
+}
+#loginWrapper .login-area .login .login-txt {
+  margin-top: 50px;
+  font-size: 26px;
+  text-align: center;
+}
+#loginWrapper .login-area .login .login-id {
+  margin-top: 30px;
+  height: 50px;
+  padding: 7px 30px;
+  border: 1px solid #d6dbe2;
+  background: #fff;
+  border-radius: 25px;
+  font-size: 18px;
+}
+#loginWrapper .login-area .login .login-id label {
+  display: inline-block;
+  margin-top: 2px;
+}
+#loginWrapper .login-area .login .login-id select {
+  width: 250px;
+  vertical-align: top;
+  margin: 3px 0 0 30px;
+  background: url(@/assets/images/select-login.png) 100% center no-repeat;
+}
+#loginWrapper .login-area .login .login-pw {
+  margin-top: 16px;
+  height: 50px;
+  padding: 7px 30px;
+  border: 1px solid #d6dbe2;
+  background: #fff;
+  border-radius: 25px;
+  font-size: 18px;
+}
+#loginWrapper .login-area .login .login-pw label {
+  display: inline-block;
+  margin-top: 2px;
+}
+#loginWrapper .login-area .login .login-pw input {
+  width: 250px;
+  margin-left: 20px;
+  vertical-align: top;
+}
+#loginWrapper .login-area .login .login-btn {
+  margin-top: 16px;
+  height: 50px;
+  font-size: 18px;
+  background: #52ace0;
+  border-radius: 25px;
+  font-family: "notob";
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+}
+#loginWrapper .login-area .login .login-info {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 16px;
+  color: #7e7e7e;
+}
+#loginWrapper .login-area .login .login-new {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+#loginWrapper .login-area .login .login-new a {
+  color: #017acd;
+  text-decoration: underline;
+}
+
+.msgbox {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #d6dbe2;
+}
+.msgbox .tit {
+  margin-bottom: 22px;
+  text-align: center;
+  color: #52ace0;
+  font-size: 18px;
+}
+.msgbox input,
+.msgbox .input-area {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background: #f9f9f9;
+  border: 1px solid #DDE1E6;
+}
+.msgbox input + input, .msgbox input + .input-area,
+.msgbox .input-area + input,
+.msgbox .input-area + .input-area {
+  margin-top: 16px;
+}
+.msgbox input > label,
+.msgbox .input-area > label {
+  display: inline-block;
+  margin: 12px 12px 0 20px;
+  font-size: 18px;
+}
+.msgbox input > input,
+.msgbox input select,
+.msgbox .input-area > input,
+.msgbox .input-area select {
+  width: 62%;
+  height: 28px;
+  border: 0;
+  margin-top: 12px;
+  font-size: 18px;
+}
+.msgbox input select,
+.msgbox .input-area select {
+  vertical-align: top;
+  margin-top: 8px;
+}
+.msgbox .info {
+  display: inline-block;
+  padding-left: 30px;
+  background: url(@/assets/images/icon-ex.png) 0 0 no-repeat;
 }
 
 body {
