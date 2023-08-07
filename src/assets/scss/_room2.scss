@@ -1832,3 +1832,106 @@
         }
     }
 }
+
+
+//로그인
+#loginWrapper {
+
+    .login-area {
+        height: calc(100vh - 40px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .login {
+            width: 400px;
+            height: 515px;
+
+            .login-tit {
+                font-size: 78px;
+                font-family: $sebangb;
+                text-align: center;
+            }
+
+            .login-txt {
+                margin-top: 50px;
+                font-size: 26px;
+                text-align: center;
+            }
+
+            .login-id {
+                margin-top: 30px;
+                height: 50px;
+                padding: 7px 30px;
+                border: 1px solid #d6dbe2;
+                background: #fff;
+                border-radius: 25px;
+                font-size: 18px;
+
+                label {
+                    display: inline-block;
+                    margin-top: 2px;
+                }
+
+                select {
+                    width: 250px;
+                    vertical-align: top;
+                    margin: 3px 0 0 30px;
+                    background: url(@/assets/images/select-login.png) 100% center no-repeat;
+                }
+            }
+
+            .login-pw {
+                margin-top: 16px;
+                height: 50px;
+                padding: 7px 30px;
+                border: 1px solid #d6dbe2;
+                background: #fff;
+                border-radius: 25px;
+                font-size: 18px;
+
+                label {
+                    display: inline-block;
+                    margin-top: 2px;
+                }
+
+                input {
+                    width: 250px;
+                    margin-left: 20px;
+                    vertical-align: top;
+                }
+            }
+
+            .login-btn {
+                margin-top: 16px;
+                height: 50px;
+                font-size: 18px;
+                background: #52ace0;
+                border-radius: 25px;
+                font-family: $notob;
+                color: #fff;
+                line-height: 48px;
+                text-align: center;
+
+            }
+
+            .login-info {
+                margin-top: 16px;
+                text-align: center;
+                font-size: 16px;
+                color: #7e7e7e;
+            }
+
+            .login-new {
+                margin-top: 30px;
+                text-align: center;
+                font-size: 18px;
+
+                a {
+                    color: #017acd;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

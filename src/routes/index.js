@@ -19,6 +19,11 @@ export default createRouter ({
       component: () => import("@/views/guide/guide")
     },
     {
+      path: '/login',
+      name: 'login',
+      component: () => import("@/views/login")
+    }, 
+    {
       path: '/app-main',
       name: 'app-main',
       component: () => import("@/views/app-main")
