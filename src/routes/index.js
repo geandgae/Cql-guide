@@ -24,6 +24,26 @@ export default createRouter ({
       component: () => import("@/views/login")
     }, 
     {
+      path: '/login/message-alert',
+      name: 'message-alert',
+      component: () => import("@/views/login/message-alert")
+    }, 
+    {
+      path: '/login/message-alert2',
+      name: 'message-alert',
+      component: () => import("@/views/login/message-alert2")
+    }, 
+    {
+      path: '/login/offline-in',
+      name: 'offline-in',
+      component: () => import("@/views/login/offline-in")
+    }, 
+    {
+      path: '/login/user-change',
+      name: 'user-change',
+      component: () => import("@/views/login/user-change")
+    }, 
+    {
       path: '/app-main',
       name: 'app-main',
       component: () => import("@/views/app-main")
