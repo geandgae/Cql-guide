@@ -3381,6 +3381,39 @@ select::-ms-expand {
   height: 28px;
   margin: 14px 24px 6px;
   background: #304153;
+  position: relative;
+}
+#content-room .status .btn-list {
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 9px;
+}
+#content-room .status .btn-list li {
+  padding-left: 20px;
+  background: url(@/assets/images/line-btn.png) 12px 2px no-repeat;
+}
+#content-room .status .btn-list li:first-child {
+  background: none;
+}
+#content-room .status .btn-list li a {
+  font-size: 0;
+  display: inline-block;
+  width: 22px;
+  height: 18px;
+  vertical-align: top;
+}
+#content-room .status .btn-list li.btn1 a {
+  background: url(@/assets/images/btn1.png) 0 0 no-repeat;
+}
+#content-room .status .btn-list li.btn2 a {
+  background: url(@/assets/images/btn2.png) 0 0 no-repeat;
+}
+#content-room .status .btn-list li.btn2.on a {
+  background: url(@/assets/images/btn2-on.png) 0 0 no-repeat;
+}
+#content-room .status .btn-list li.btn3 a {
+  background: url(@/assets/images/btn3.png) 0 0 no-repeat;
 }
 #content-room .status .tit {
   padding: 4px 0 0 40px;

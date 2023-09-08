@@ -59,6 +59,11 @@ export default createRouter ({
       component: () => import("@/views/div/room-sett") 
     },
     {
+      path: '/div/room-sett2',
+      name: 'room-sett2',
+      component: () => import("@/views/div/room-sett2") 
+    },
+    {
       path: '/div/setting-r',
       name: 'setting-r',
       component: () => import("@/views/div/setting-r") 

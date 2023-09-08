@@ -248,6 +248,53 @@
         height: 28px;
         margin: 14px 24px 6px;
         background: #304153;
+        position: relative;
+
+        .btn-list {
+            display: flex;
+            position: absolute;
+            top: 5px;
+            right: 9px;
+
+            li {
+                padding-left: 20px;
+                background: url(@/assets/images/line-btn.png) 12px 2px no-repeat;
+
+                &:first-child {
+                    background: none;
+                }
+
+                a {
+                    font-size: 0;
+                    display: inline-block;
+                    width: 22px;
+                    height: 18px;
+                    vertical-align: top;
+                }
+
+                &.btn1 {
+                    a {
+                        background: url(@/assets/images/btn1.png) 0 0 no-repeat;
+                    }
+                }
+
+                &.btn2 {
+                    a {
+                        background: url(@/assets/images/btn2.png) 0 0 no-repeat;
+                    }
+
+                    &.on a {
+                        background: url(@/assets/images/btn2-on.png) 0 0 no-repeat;
+                    }
+                }
+
+                &.btn3 {
+                    a {
+                        background: url(@/assets/images/btn3.png) 0 0 no-repeat;
+                    }
+                }
+            }
+        }
 
         .tit {
             padding: 4px 0 0 40px;

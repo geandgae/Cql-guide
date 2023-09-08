@@ -87,6 +87,11 @@
           <li>[스위트룸 203호] 00 이벤트가 발생했습니다.</li>
           <li class="event2">[스위트룸 203호] 00 이벤트가 발생했습니다.</li>
         </ul>
+        <ul class="btn-list">
+          <li class="btn1"><a href="link">버튼1</a></li>
+          <li class="btn2 on"><a href="link">버튼2</a></li>
+          <li class="btn3"><a href="link">버튼3</a></li>
+        </ul>
       </div>
       <ul class="room-list">
         <li>
