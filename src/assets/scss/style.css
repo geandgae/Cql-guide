@@ -3602,42 +3602,6 @@ select::-ms-expand {
 #content-room .room-list > li + li {
   margin-left: 20px;
 }
-#content-room .room-list > li.on .key {
-  background: #304153 url(@/assets/images/icon-people.png) center center no-repeat;
-}
-#content-room .room-list > li.on .list {
-  background: #304153 url(@/assets/images/icon-list.png) center center no-repeat;
-}
-#content-room .room-list > li.on .tit {
-  color: #fff;
-}
-#content-room .room-list > li.on .checkinout {
-  color: #fff;
-}
-#content-room .room-list > li.on .stay-txt {
-  background: #5c86f1;
-  color: #fff !important;
-}
-#content-room .room-list > li.on .list {
-  background: #304153 url(@/assets/images/icon-list.png) center center no-repeat !important;
-}
-#content-room .room-list > li.on .checkinout dd {
-  color: #ffc400;
-}
-#content-room .room-list > li.on .checkinout dd.type2 {
-  color: #00ffff;
-}
-#content-room .room-list > li.on .onoff {
-  color: #fff;
-  background: #304153 url(@/assets/images/icon-onoff.png) center 3px no-repeat !important;
-}
-#content-room .room-list > li.on .temperature {
-  color: #fff;
-}
-#content-room .room-list > li.on .communication {
-  color: #fff;
-  background: #304153 url(@/assets/images/icon-onoff.png) center 3px no-repeat !important;
-}
 #content-room .room-list > li .tit-area {
   display: flex;
   justify-content: space-between;
@@ -3734,15 +3698,15 @@ select::-ms-expand {
   color: #fff;
 }
 #content-room .room-list > li .content-area .stay-txt.clean {
-  background: #f9a454;
+  background: #f9a454 !important;
   color: #fff;
 }
 #content-room .room-list > li .content-area .stay-txt.cleaning {
-  background: #4fc466;
+  background: #4fc466 !important;
   color: #fff;
 }
 #content-room .room-list > li .content-area .stay-txt.cleaning-done {
-  background: #16d2c3;
+  background: #16d2c3 !important;
   color: #fff;
 }
 #content-room .room-list > li .content-area .stay-alarm {
@@ -3941,6 +3905,42 @@ select::-ms-expand {
 }
 #content-room .room-list > li .power .communication.out {
   background: #304153 url(@/assets/images/icon-onoff-out.png) center 0 no-repeat !important;
+}
+#content-room .room-list > li.on .key {
+  background: #304153 url(@/assets/images/icon-people.png) center center no-repeat;
+}
+#content-room .room-list > li.on .list {
+  background: #304153 url(@/assets/images/icon-list.png) center center no-repeat;
+}
+#content-room .room-list > li.on .tit {
+  color: #fff;
+}
+#content-room .room-list > li.on .checkinout {
+  color: #fff;
+}
+#content-room .room-list > li.on .stay-txt {
+  background: #5c86f1;
+  color: #fff !important;
+}
+#content-room .room-list > li.on .list {
+  background: #304153 url(@/assets/images/icon-list.png) center center no-repeat !important;
+}
+#content-room .room-list > li.on .checkinout dd {
+  color: #ffc400;
+}
+#content-room .room-list > li.on .checkinout dd.type2 {
+  color: #00ffff;
+}
+#content-room .room-list > li.on .onoff {
+  color: #fff;
+  background: #304153 url(@/assets/images/icon-onoff.png) center 3px no-repeat !important;
+}
+#content-room .room-list > li.on .temperature {
+  color: #fff;
+}
+#content-room .room-list > li.on .communication {
+  color: #fff;
+  background: #304153 url(@/assets/images/icon-onoff.png) center 3px no-repeat !important;
 }
 
 #wrapper-time header .noto {
@@ -4176,10 +4176,10 @@ select::-ms-expand {
   color: #fff !important;
 }
 #wrapper-time .time-content .content > div .room-list > li:hover .stay-txt.rent {
-  background: #7868e5 !important;
+  background: #7868e5;
 }
 #wrapper-time .time-content .content > div .room-list > li:hover .stay-txt.long {
-  background: #3770bb !important;
+  background: #3770bb;
 }
 #wrapper-time .time-content .content .layer1 {
   width: 1520px;

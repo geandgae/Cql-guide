@@ -518,56 +518,7 @@
                 margin-left: 20px;
             }
 
-            &.on {
-                .key {
-                    background: #304153 url(@/assets/images/icon-people.png) center center no-repeat;
-                }
 
-                .list {
-                    background: #304153 url(@/assets/images/icon-list.png) center center no-repeat;
-                }
-
-                .tit {
-                    color: #fff;
-                }
-
-                .checkinout {
-                    color: #fff;
-                }
-
-                .stay-txt {
-                    background: #5c86f1;
-                    color: #fff !important;
-                }
-
-                .list {
-                    background: #304153 url(@/assets/images/icon-list.png) center center no-repeat !important;
-                }
-
-                .checkinout {
-                    dd {
-                        color: #ffc400;
-
-                        &.type2 {
-                            color: #00ffff;
-                        }
-                    }
-                }
-
-                .onoff {
-                    color: #fff;
-                    background: #304153 url(@/assets/images/icon-onoff.png) center 3px no-repeat !important;
-                }
-
-                .temperature {
-                    color: #fff;
-                }
-
-                .communication {
-                    color: #fff;
-                    background: #304153 url(@/assets/images/icon-onoff.png) center 3px no-repeat !important;
-                }
-            }
 
             .tit-area {
                 display: flex;
@@ -679,17 +630,17 @@
                     }
 
                     &.clean {
-                        background: #f9a454;
+                        background: #f9a454 !important;
                         color: #fff;
                     }
 
                     &.cleaning {
-                        background: #4fc466;
+                        background: #4fc466 !important;
                         color: #fff;
                     }
 
                     &.cleaning-done {
-                        background: #16d2c3;
+                        background: #16d2c3 !important;
                         color: #fff;
                     }
 
@@ -922,6 +873,57 @@
                     &.out {
                         background: #304153 url(@/assets/images/icon-onoff-out.png) center 0 no-repeat !important;
                     }
+                }
+            }
+
+            &.on {
+                .key {
+                    background: #304153 url(@/assets/images/icon-people.png) center center no-repeat;
+                }
+
+                .list {
+                    background: #304153 url(@/assets/images/icon-list.png) center center no-repeat;
+                }
+
+                .tit {
+                    color: #fff;
+                }
+
+                .checkinout {
+                    color: #fff;
+                }
+
+                .stay-txt {
+                    background: #5c86f1;
+                    color: #fff !important;
+                }
+
+                .list {
+                    background: #304153 url(@/assets/images/icon-list.png) center center no-repeat !important;
+                }
+
+                .checkinout {
+                    dd {
+                        color: #ffc400;
+
+                        &.type2 {
+                            color: #00ffff;
+                        }
+                    }
+                }
+
+                .onoff {
+                    color: #fff;
+                    background: #304153 url(@/assets/images/icon-onoff.png) center 3px no-repeat !important;
+                }
+
+                .temperature {
+                    color: #fff;
+                }
+
+                .communication {
+                    color: #fff;
+                    background: #304153 url(@/assets/images/icon-onoff.png) center 3px no-repeat !important;
                 }
             }
         }
@@ -1227,11 +1229,11 @@
                             color: #fff !important;
 
                             &.rent {
-                                background: #7868e5 !important;
+                                background: #7868e5;
                             }
 
                             &.long {
-                                background: #3770bb !important;
+                                background: #3770bb;
                             }
                         }
                     }
